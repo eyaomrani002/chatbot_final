@@ -1,0 +1,720 @@
+2025-05-10 01:49:10 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:49:10 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:49:10 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:49:10 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:49:10 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:49:10 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:49:10 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:49:10 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:49:10 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:49:10 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:49:10 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:49:10 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:49:10 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:49:10 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:49:10 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:49:10 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:49:10 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:49:10 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:49:10 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:49:10 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:49:10 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:49:10 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:49:10 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:49:10 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:49:10 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:49:10 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:10 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:10 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:10 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:10 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:10 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:10 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:10 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:49:10 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:49:10 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:49:10 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:49:10 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:49:10 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:49:10 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:49:10 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:10 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:10 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:10 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:10 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:10 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:10 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:10 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:49:10 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:49:10 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:49:10 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:49:10 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:49:10 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:49:10 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:49:10 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:49:10 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:49:10 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:49:10 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:49:10 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:49:10 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:49:10 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:49:10 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:10 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:10 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:10 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:10 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:10 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:10 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:10 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:49:10 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:49:10 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:49:10 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:49:10 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:49:10 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:49:10 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:49:10 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:10 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:10 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:10 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:10 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:10 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:10 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:10 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:49:10 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:49:10 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:49:10 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:49:10 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:49:10 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:49:10 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:49:10 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:49:10 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:49:10 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:49:10 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:49:10 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:49:10 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:49:10 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:49:10 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:49:10 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:49:10 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:49:10 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:49:10 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:49:10 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:49:10 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:49:19 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:49:19 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:49:19 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:49:19 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:49:19 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:49:19 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:49:19 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:49:19 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:49:19 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:49:19 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:49:19 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:49:19 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:49:19 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:49:19 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:49:22 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:49:22 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:49:22 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:49:22 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:49:23 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:49:23 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:49:23 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:49:23 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:49:23 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:49:23 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:49:23 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:49:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:49:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:49:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:49:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:49:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:49:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:49:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:49:23 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:49:23 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:49:23 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:49:23 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:49:23 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:49:23 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:49:23 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:49:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:23 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:49:23 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:49:23 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:49:23 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:49:23 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:49:23 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:49:23 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:49:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:49:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:49:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:49:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:49:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:49:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:49:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:49:23 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:49:23 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:49:23 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:49:23 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:49:23 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:49:23 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:49:23 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:49:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:49:23 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:49:23 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:49:23 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:49:23 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:49:23 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:49:23 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:49:23 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:49:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:49:23 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:49:23 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:49:23 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:49:23 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:49:23 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:49:23 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:49:23 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:49:23 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:49:23 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:49:23 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:49:23 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:49:23 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:49:23 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:49:23 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:49:23 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:49:23 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:49:23 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:49:23 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:49:23 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:49:23 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:49:23 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:49:34 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:34] "GET /?csrf_token=&message=Quand+est+l’examen+de+Python+?&pdf_file=&image_file=&output_lang=fr HTTP/1.1" 200 -
+2025-05-10 01:49:34 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:34] "GET /?csrf_token=&message=Quand+est+l’examen+de+Python+?&pdf_file=&image_file=&output_lang=fr HTTP/1.1" 200 -
+2025-05-10 01:49:34 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:34] "GET /?csrf_token=&message=Quand+est+l’examen+de+Python+?&pdf_file=&image_file=&output_lang=fr HTTP/1.1" 200 -
+2025-05-10 01:49:34 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:34] "GET /?csrf_token=&message=Quand+est+l’examen+de+Python+?&pdf_file=&image_file=&output_lang=fr HTTP/1.1" 200 -
+2025-05-10 01:49:34 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:34] "GET /?csrf_token=&message=Quand+est+l’examen+de+Python+?&pdf_file=&image_file=&output_lang=fr HTTP/1.1" 200 -
+2025-05-10 01:49:34 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:34] "GET /?csrf_token=&message=Quand+est+l’examen+de+Python+?&pdf_file=&image_file=&output_lang=fr HTTP/1.1" 200 -
+2025-05-10 01:49:34 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:34] "GET /?csrf_token=&message=Quand+est+l’examen+de+Python+?&pdf_file=&image_file=&output_lang=fr HTTP/1.1" 200 -
+2025-05-10 01:49:41 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:49:41 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:49:41 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:49:41 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:49:41 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:49:41 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:49:41 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:49:41 - app - DEBUG - Received question: 
+2025-05-10 01:49:41 - app - DEBUG - Received question: 
+2025-05-10 01:49:41 - app - DEBUG - Received question: 
+2025-05-10 01:49:41 - app - DEBUG - Received question: 
+2025-05-10 01:49:41 - app - DEBUG - Received question: 
+2025-05-10 01:49:41 - app - DEBUG - Received question: 
+2025-05-10 01:49:41 - app - DEBUG - Received question: 
+2025-05-10 01:49:41 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:49:41 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:49:41 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:49:41 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:49:41 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:49:41 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:49:41 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:49:41 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '73dcbf11-847f-48a4-af40-1041a271f44d', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:49:41 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '73dcbf11-847f-48a4-af40-1041a271f44d', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:49:41 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '73dcbf11-847f-48a4-af40-1041a271f44d', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:49:41 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '73dcbf11-847f-48a4-af40-1041a271f44d', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:49:41 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '73dcbf11-847f-48a4-af40-1041a271f44d', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:49:41 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '73dcbf11-847f-48a4-af40-1041a271f44d', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:49:41 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '73dcbf11-847f-48a4-af40-1041a271f44d', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:49:41 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '73dcbf11-847f-48a4-af40-1041a271f44d', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:49:41 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '73dcbf11-847f-48a4-af40-1041a271f44d', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:49:41 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '73dcbf11-847f-48a4-af40-1041a271f44d', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:49:41 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '73dcbf11-847f-48a4-af40-1041a271f44d', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:49:41 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '73dcbf11-847f-48a4-af40-1041a271f44d', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:49:41 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '73dcbf11-847f-48a4-af40-1041a271f44d', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:49:41 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '73dcbf11-847f-48a4-af40-1041a271f44d', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:49:41 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:41] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:49:41 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:41] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:49:41 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:41] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:49:41 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:41] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:49:41 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:41] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:49:41 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:41] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:49:41 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:41] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:49:45 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:49:45 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:49:45 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:49:45 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:49:45 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:49:45 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:49:45 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:49:45 - app - DEBUG - Received question: 
+2025-05-10 01:49:45 - app - DEBUG - Received question: 
+2025-05-10 01:49:45 - app - DEBUG - Received question: 
+2025-05-10 01:49:45 - app - DEBUG - Received question: 
+2025-05-10 01:49:45 - app - DEBUG - Received question: 
+2025-05-10 01:49:45 - app - DEBUG - Received question: 
+2025-05-10 01:49:45 - app - DEBUG - Received question: 
+2025-05-10 01:49:45 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:49:45 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:49:45 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:49:45 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:49:45 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:49:45 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:49:45 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:49:45 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '04ab606a-c64b-41c3-a6ec-49aa2c0883a6', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:49:45 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '04ab606a-c64b-41c3-a6ec-49aa2c0883a6', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:49:45 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '04ab606a-c64b-41c3-a6ec-49aa2c0883a6', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:49:45 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '04ab606a-c64b-41c3-a6ec-49aa2c0883a6', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:49:45 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '04ab606a-c64b-41c3-a6ec-49aa2c0883a6', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:49:45 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '04ab606a-c64b-41c3-a6ec-49aa2c0883a6', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:49:45 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '04ab606a-c64b-41c3-a6ec-49aa2c0883a6', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:49:45 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '04ab606a-c64b-41c3-a6ec-49aa2c0883a6', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:49:45 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '04ab606a-c64b-41c3-a6ec-49aa2c0883a6', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:49:45 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '04ab606a-c64b-41c3-a6ec-49aa2c0883a6', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:49:45 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '04ab606a-c64b-41c3-a6ec-49aa2c0883a6', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:49:45 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '04ab606a-c64b-41c3-a6ec-49aa2c0883a6', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:49:45 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '04ab606a-c64b-41c3-a6ec-49aa2c0883a6', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:49:45 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '04ab606a-c64b-41c3-a6ec-49aa2c0883a6', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:49:45 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:45] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:49:45 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:45] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:49:45 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:45] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:49:45 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:45] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:49:45 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:45] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:49:45 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:45] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:49:45 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:49:45] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:50:17 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:17 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:17 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:17 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:17 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:17 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:17 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:17 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:17 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:17 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:17 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:17 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:17 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:17 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:19 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:50:19 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:50:19 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:50:19 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:50:19 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:19 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:19 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:19 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:19 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:19 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:19 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:19 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:19 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:19 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:19 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:19 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:19 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:19 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:19 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:19 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:19 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:19 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:19 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:19 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:19 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:19 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:19 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:19 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:19 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:19 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:19 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:19 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:19 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:19 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:19 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:19 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:19 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:19 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:19 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:19 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:19 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:19 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:19 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:19 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:19 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:19 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:19 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:19 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:19 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:19 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:19 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:19 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:19 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:19 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:19 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:19 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:19 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:19 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:19 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:19 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:19 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:19 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:19 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:19 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:19 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:19 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:19 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:19 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:19 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:19 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:19 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:19 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:19 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:19 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:19 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:19 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:19 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:19 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:19 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:19 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:19 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:19 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:19 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:19 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:19 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:19 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:19 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:19 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:19 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:19 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:19 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:19 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:19 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:19 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:19 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:19 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:19 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:19 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:19 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:19 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:19 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:19 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:20 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:20 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:20 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:20 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:20 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:20 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:20 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:20 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:20 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:20 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:20 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:20 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:20 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:20 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:22 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:50:22 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:50:22 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:50:22 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:50:23 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:23 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:23 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:23 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:23 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:23 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:23 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:23 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:23 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:23 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:23 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:23 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:23 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:23 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:23 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:23 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:23 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:23 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:23 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:23 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:23 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:23 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:23 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:23 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:23 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:23 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:23 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:23 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:23 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:23 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:23 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:23 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:23 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:23 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:23 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:23 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:23 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:23 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:23 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:23 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:23 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:23 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:23 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:23 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:23 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:23 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:23 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:23 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:23 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:23 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:23 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:23 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:23 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:23 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:23 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:23 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:23 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:23 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:23 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:25 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:25 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:25 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:25 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:25 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:25 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:25 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:25 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:25 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:25 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:25 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:25 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:25 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:25 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\image_processing.py', reloading
+2025-05-10 01:50:28 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:50:28 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:50:28 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:50:28 - app - DEBUG - Flask app initialized with upload folder: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\uploads
+2025-05-10 01:50:28 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:28 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:28 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:28 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:28 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:28 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:28 - app - DEBUG - Looking for data directory at: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data
+2025-05-10 01:50:28 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:28 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:28 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:28 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:28 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:28 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:28 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv
+2025-05-10 01:50:28 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:28 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:28 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:28 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:28 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:28 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:28 - app - DEBUG - Loaded fr dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_fr.csv with 181 rows.
+2025-05-10 01:50:28 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:28 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:28 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:28 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:28 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:28 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:28 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:28 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:28 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:28 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:28 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:28 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:28 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:28 - app - DEBUG - SVM model initialized for intent classification (language: fr).
+2025-05-10 01:50:28 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:28 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:28 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:28 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:28 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:28 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:28 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:28 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:28 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:28 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:28 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:28 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:28 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:28 - app - DEBUG - Attempting to load dataset from: F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv
+2025-05-10 01:50:28 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:28 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:28 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:28 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:28 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:28 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:28 - app - DEBUG - Loaded en dataset from F:\DSIR12\SYM2\SI2\projet\chatbot2\app\data\iset_questions_reponses_en.csv with 12 rows.
+2025-05-10 01:50:28 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:28 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:28 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:28 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:28 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:28 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:28 - app - DEBUG - KNN model initialized.
+2025-05-10 01:50:28 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:28 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:28 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:28 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:28 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:28 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:28 - app - DEBUG - SVM model initialized for intent classification (language: en).
+2025-05-10 01:50:28 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:28 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:28 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:28 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:28 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:28 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:28 - app - DEBUG - Cosine Similarity model initialized.
+2025-05-10 01:50:28 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:28 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:28 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:28 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:28 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:28 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:28 - app - INFO - Datasets, vectorizers, and models initialized successfully for French and English.
+2025-05-10 01:50:28 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:28 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:28 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:28 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:28 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:28 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:28 - werkzeug - WARNING -  * Debugger is active!
+2025-05-10 01:50:28 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:28 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:28 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:28 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:28 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:28 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:28 - werkzeug - INFO -  * Debugger PIN: 287-420-713
+2025-05-10 01:50:54 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:50:54] "GET /?csrf_token=&message=Quand+est+l’examen+de+Python+?&pdf_file=&image_file=&output_lang=fr HTTP/1.1" 200 -
+2025-05-10 01:50:54 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:50:54] "GET /?csrf_token=&message=Quand+est+l’examen+de+Python+?&pdf_file=&image_file=&output_lang=fr HTTP/1.1" 200 -
+2025-05-10 01:50:54 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:50:54] "GET /?csrf_token=&message=Quand+est+l’examen+de+Python+?&pdf_file=&image_file=&output_lang=fr HTTP/1.1" 200 -
+2025-05-10 01:50:54 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:50:54] "GET /?csrf_token=&message=Quand+est+l’examen+de+Python+?&pdf_file=&image_file=&output_lang=fr HTTP/1.1" 200 -
+2025-05-10 01:50:54 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:50:54] "GET /?csrf_token=&message=Quand+est+l’examen+de+Python+?&pdf_file=&image_file=&output_lang=fr HTTP/1.1" 200 -
+2025-05-10 01:50:54 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:50:54] "GET /?csrf_token=&message=Quand+est+l’examen+de+Python+?&pdf_file=&image_file=&output_lang=fr HTTP/1.1" 200 -
+2025-05-10 01:50:54 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:50:54] "GET /?csrf_token=&message=Quand+est+l’examen+de+Python+?&pdf_file=&image_file=&output_lang=fr HTTP/1.1" 200 -
+2025-05-10 01:51:00 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:51:00 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:51:00 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:51:00 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:51:00 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:51:00 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:51:00 - app - DEBUG - Processing image: Capture d'écran 2025-05-09 195547.png
+2025-05-10 01:51:00 - app - DEBUG - Received question: 
+2025-05-10 01:51:00 - app - DEBUG - Received question: 
+2025-05-10 01:51:00 - app - DEBUG - Received question: 
+2025-05-10 01:51:00 - app - DEBUG - Received question: 
+2025-05-10 01:51:00 - app - DEBUG - Received question: 
+2025-05-10 01:51:00 - app - DEBUG - Received question: 
+2025-05-10 01:51:00 - app - DEBUG - Received question: 
+2025-05-10 01:51:00 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:51:00 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:51:00 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:51:00 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:51:00 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:51:00 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:51:00 - app - DEBUG - Processing input: Fichier uploadé in language: fr with method: knn
+2025-05-10 01:51:00 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '808d0d78-a50c-4a2c-a8da-057611e301d5', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:51:00 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '808d0d78-a50c-4a2c-a8da-057611e301d5', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:51:00 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '808d0d78-a50c-4a2c-a8da-057611e301d5', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:51:00 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '808d0d78-a50c-4a2c-a8da-057611e301d5', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:51:00 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '808d0d78-a50c-4a2c-a8da-057611e301d5', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:51:00 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '808d0d78-a50c-4a2c-a8da-057611e301d5', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:51:00 - app - DEBUG - Generated response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '808d0d78-a50c-4a2c-a8da-057611e301d5', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr'}
+2025-05-10 01:51:00 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '808d0d78-a50c-4a2c-a8da-057611e301d5', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:51:00 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '808d0d78-a50c-4a2c-a8da-057611e301d5', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:51:00 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '808d0d78-a50c-4a2c-a8da-057611e301d5', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:51:00 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '808d0d78-a50c-4a2c-a8da-057611e301d5', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:51:00 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '808d0d78-a50c-4a2c-a8da-057611e301d5', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:51:00 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '808d0d78-a50c-4a2c-a8da-057611e301d5', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:51:00 - app - DEBUG - Sending response: {'answer': 'Les horaires sont disponibles sur le portail étudiant. Consultez la section Horaires.', 'link': 'http://iset.example.com/horaires', 'category': 'Horaires', 'response_id': '808d0d78-a50c-4a2c-a8da-057611e301d5', 'confidence': 0.0, 'intent': 'Général', 'suggestion': 'http://iset.example.com/accueil', 'language': 'fr', 'ask_for_response': True}
+2025-05-10 01:51:00 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:51:00] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:51:00 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:51:00] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:51:00 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:51:00] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:51:00 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:51:00] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:51:00 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:51:00] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:51:00 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:51:00] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:51:00 - werkzeug - INFO - 127.0.0.1 - - [10/May/2025 01:51:00] "POST /chat HTTP/1.1" 200 -
+2025-05-10 01:51:22 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:51:22 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:51:22 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:51:22 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:51:22 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:51:22 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:51:22 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:51:22 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:51:22 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:51:22 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:51:22 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:51:22 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:51:22 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading
+2025-05-10 01:51:22 - werkzeug - INFO -  * Detected change in 'F:\\DSIR12\\SYM2\\SI2\\projet\\chatbot2\\app\\utils\\logging.py', reloading

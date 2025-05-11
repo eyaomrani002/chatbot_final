@@ -1,0 +1,108 @@
+2025-05-08 20:27:23,250 ERROR: Amiri-Regular.ttf not found. Please download it for Arabic PDF support.
+2025-05-08 21:50:12,737 - __main__ - INFO - Base de données vide, initialisation avec des données par défaut
+2025-05-08 21:53:51,160 - __main__ - DEBUG - Langue utilisée pour stopwords : french
+2025-05-08 21:57:29,819 - __main__ - DEBUG - Langue utilisée pour stopwords : french
+2025-05-08 21:59:41,913 - __main__ - INFO - Téléchargement des données NLTK manquantes...
+2025-05-08 21:59:42,275 - __main__ - DEBUG - Chemins NLTK : ['C:\\Users\\lenovo/nltk_data', 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\nltk_data', 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\share\\nltk_data', 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\lib\\nltk_data', 'C:\\Users\\lenovo\\AppData\\Roaming\\nltk_data', 'C:\\nltk_data', 'D:\\nltk_data', 'E:\\nltk_data']
+2025-05-08 21:59:42,319 - __main__ - DEBUG - Langue utilisée pour stopwords : french
+2025-05-08 21:59:42,322 - __main__ - ERROR - Erreur NLTK punkt : 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/fr/[0m
+
+  Searched in:
+    - 'C:\\Users\\lenovo/nltk_data'
+    - 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\nltk_data'
+    - 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\share\\nltk_data'
+    - 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\lib\\nltk_data'
+    - 'C:\\Users\\lenovo\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-05-08 22:00:01,295 - __main__ - INFO - Téléchargement des données NLTK manquantes...
+2025-05-08 22:00:03,032 - __main__ - DEBUG - Chemins NLTK : ['C:\\Users\\lenovo/nltk_data', 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\nltk_data', 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\share\\nltk_data', 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\lib\\nltk_data', 'C:\\Users\\lenovo\\AppData\\Roaming\\nltk_data', 'C:\\nltk_data', 'D:\\nltk_data', 'E:\\nltk_data']
+2025-05-08 22:00:03,077 - __main__ - DEBUG - Langue utilisée pour stopwords : french
+2025-05-08 22:00:03,080 - __main__ - ERROR - Erreur NLTK punkt : 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/fr/[0m
+
+  Searched in:
+    - 'C:\\Users\\lenovo/nltk_data'
+    - 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\nltk_data'
+    - 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\share\\nltk_data'
+    - 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\lib\\nltk_data'
+    - 'C:\\Users\\lenovo\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-05-08 22:00:38,399 - __main__ - INFO - Téléchargement des données NLTK manquantes...
+2025-05-08 22:00:39,083 - __main__ - DEBUG - Chemins NLTK : ['C:\\Users\\lenovo/nltk_data', 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\nltk_data', 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\share\\nltk_data', 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\lib\\nltk_data', 'C:\\Users\\lenovo\\AppData\\Roaming\\nltk_data', 'C:\\nltk_data', 'D:\\nltk_data', 'E:\\nltk_data']
+2025-05-08 22:00:39,128 - __main__ - DEBUG - Langue utilisée pour stopwords : french
+2025-05-08 22:00:39,131 - __main__ - ERROR - Erreur NLTK punkt : 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/fr/[0m
+
+  Searched in:
+    - 'C:\\Users\\lenovo/nltk_data'
+    - 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\nltk_data'
+    - 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\share\\nltk_data'
+    - 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\lib\\nltk_data'
+    - 'C:\\Users\\lenovo\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-05-08 22:04:52,720 - __main__ - INFO - Téléchargement des données NLTK manquantes...
+2025-05-08 22:04:52,720 - __main__ - DEBUG - Chemins NLTK : ['C:\\Users\\lenovo/nltk_data', 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\nltk_data', 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\share\\nltk_data', 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\lib\\nltk_data', 'C:\\Users\\lenovo\\AppData\\Roaming\\nltk_data', 'C:\\nltk_data', 'D:\\nltk_data', 'E:\\nltk_data']
+2025-05-08 22:04:52,763 - __main__ - DEBUG - Langue utilisée pour stopwords : french
+2025-05-08 22:04:52,766 - __main__ - ERROR - Erreur NLTK punkt : 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/fr/[0m
+
+  Searched in:
+    - 'C:\\Users\\lenovo/nltk_data'
+    - 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\nltk_data'
+    - 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\share\\nltk_data'
+    - 'C:\\Users\\lenovo\\AppData\\Local\\Programs\\Python\\Python312\\lib\\nltk_data'
+    - 'C:\\Users\\lenovo\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+

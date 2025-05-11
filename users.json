@@ -1,0 +1,20 @@
+[
+  {
+    "id": 3,
+    "username": "admin",
+    "email": "admin@gmail.com",
+    "password": "pbkdf2:sha256:600000$nHm56a4NvUcC35ut$5029d1cea837c4b2b066fb379bcdaa50370a18609aba4ae8d202fbfdea40ada6"
+  },
+  {
+    "id": 4,
+    "username": "aya",
+    "email": "aya@gmail.com",
+    "password": "pbkdf2:sha256:600000$5K3iDX1kWjQ54kBW$c5ca5ddf9852b9db95a1f4602024a3e9dcb59c5b8d888f3e5236508622e10d77"
+  },
+  {
+    "id": 5,
+    "username": "eya",
+    "email": "eya@gmail.com",
+    "password": "pbkdf2:sha256:600000$nZKLrepVN6QZaQmS$c0f759abd4b42838b5ddde1cb4f03f3f336e253a063714c854670cf68b234bbb"
+  }
+]

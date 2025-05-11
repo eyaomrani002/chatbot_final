@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISET Assistant - Interface Moderne</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .chat-bubble-user {
+            background: var(--chat-user-bg);
+            color: var(--text-primary);
+            border-radius: 16px 16px 4px 16px;
+            padding: 12px 16px;
+            margin: 8px 12px 8px auto;
+            max-width: 80%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
+            animation: slideIn 0.3s ease;
+        }
+
+        .chat-bubble-bot {
+            background: var(--chat-bot-bg);
+            color: var(--text-primary);
+            border-radius: 16px 16px 16px 4px;
+            padding: 12px 16px;
+            margin: 8px auto 8px 12px;
+            max-width: 80%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
+            border: 1px solid var(--chat-bot-border);
+            animation: slideIn 0.3s ease;
+        }
+
+        .chat-container {
+            scrollbar-width: thin;
+            scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+        }
+
+        .chat-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .chat-container::-webkit-scrollbar-track {
+            background: var(--scrollbar-track);
+        }
+
+        .chat-container::-webkit-scrollbar-thumb {
+            background-color: var(--scrollbar-thumb);
+            border-radius: 20px;
+        }
+
+        .glass-effect {
+            background: var(--glass-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .animated-button {
+            transform: scale(1);
+            transition: transform 0.2s ease;
+            background: var(--button-bg);
+            color: #ffffff;
+        }
+
+        .animated-button:hover {
+            transform: scale(1.05);
+            background: var(--button-hover);
+        }
+
+        .animated-button:active {
+            transform: scale(0.95);
+        }
+
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .preview-box {
+            max-height: 150px;
+            overflow-y: auto;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            border-radius: 8px;
+            padding: 10px;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+
+        /* Styles pour les boutons like/dislike */
+        .like-btn,
+        .dislike-btn {
+            transition: color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+
+        .like-btn.active {
+            color: white !important;
+            background-color: #22c55e !important;
+        }
+
+        .dislike-btn.active {
+            color: white !important;
+            background-color: #ef4444 !important;
+        }
+
+        .like-btn.inactive,
+        .dislike-btn.inactive {
+            color: #9ca3af !important;
+            background-color: transparent !important;
+            opacity: 0.5;
+        }
+
+        .like-btn:hover:not(.active):not(.inactive),
+        .dislike-btn:hover:not(.active):not(.inactive) {
+            opacity: 0.8;
+        }
+
+        .read-btn,
+        .copy-btn {
+            transition: color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-right: 8px;
+            color: #3b82f6;
+        }
+
+        .read-btn:hover,
+        .copy-btn:hover {
+            opacity: 0.8;
+            color: #2563eb;
+        }
+
+        .read-btn.active {
+            color: white !important;
+            background-color: #3b82f6 !important;
+        }
+
+        .copy-btn.copied {
+            color: white !important;
+            background-color: #10b981 !important;
+        }
+
+        :root {
+            /* Thème clair (par défaut) */
+            --bg-gradient: #ffffff;
+            /* Fond blanc uni */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --text-primary: #1f2937;
+            --text-secondary: #4b5563;
+            --border-primary: #d1d5db;
+            --button-bg: #4f46e5;
+            --button-hover: #4338ca;
+            --chat-user-bg: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            --chat-bot-bg: #ffffff;
+            --chat-bot-border: #e5e7eb;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --scrollbar-track: #e5e7eb;
+            --scrollbar-thumb: #6b7280;
+        }
+
+        [data-theme="dark"] {
+            /* Thème sombre */
+            --bg-gradient: linear-gradient(to bottom, #1f2937, #111827);
+            --bg-primary: #1f2937;
+            --bg-secondary: #374151;
+            --text-primary: #e5e7eb;
+            --text-secondary: #9ca3af;
+            --border-primary: #4b5563;
+            --button-bg: #6366f1;
+            --button-hover: #4f46e5;
+            --chat-user-bg: linear-gradient(135deg, #4b5563 0%, #374151 100%);
+            --chat-bot-bg: #374151;
+            --chat-bot-border: #4b5563;
+            --glass-bg: rgba(31, 41, 55, 0.5);
+            --glass-border: rgba(75, 85, 99, 0.3);
+            --scrollbar-track: #374151;
+            --scrollbar-thumb: #6b7280;
+        }
+
+        [data-theme="amber"] {
+            /* Thème ambre */
+            --bg-gradient: linear-gradient(to bottom, #fef3c7, #fcd34d);
+            --bg-primary: #fef3c7;
+            --bg-secondary: #fffbeb;
+            --text-primary: #78350f;
+            --text-secondary: #92400e;
+            --border-primary: #d97706;
+            --button-bg: #d97706;
+            --button-hover: #b45309;
+            --chat-user-bg: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            --chat-bot-bg: #fffbeb;
+            --chat-bot-border: #d97706;
+            --glass-bg: rgba(254, 243, 199, 0.2);
+            --glass-border: rgba(217, 119, 6, 0.3);
+            --scrollbar-track: #fef3c7;
+            --scrollbar-thumb: #d97706;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .chat-container {
+            scrollbar-width: thin;
+            scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+        }
+
+        .chat-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .chat-container::-webkit-scrollbar-track {
+            background: var(--scrollbar-track);
+        }
+
+        .chat-container::-webkit-scrollbar-thumb {
+            background-color: var(--scrollbar-thumb);
+            border-radius: 20px;
+        }
+
+        .glass-effect {
+            background: var(--glass-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        /* Mise à jour des boutons pour les thèmes */
+        #sendButton {
+            background: var(--button-bg);
+        }
+
+        #sendButton:hover {
+            background: var(--button-hover);
+        }
+
+        #recordButton {
+            background: #22c55e;
+        }
+
+        #recordButton:hover {
+            background: #16a34a;
+        }
+
+        #exportButton {
+            background: #8b5cf6;
+        }
+
+        #exportButton:hover {
+            background: #7c3aed;
+        }
+
+        /* Formulaire d'entrée */
+        #userInput {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            color: var(--text-primary);
+        }
+
+        #userInput::placeholder {
+            color: var(--text-secondary);
+        }
+
+        /* Formulaire de réponse */
+        #responseForm {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-primary);
+        }
+
+        #newResponse,
+        #newLink,
+        #newCategory {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            color: var(--text-primary);
+        }
+
+        #newResponse::placeholder,
+        #newLink::placeholder {
+            color: var(--text-secondary);
+        }
+
+        #submitResponse {
+            background: var(--button-bg);
+        }
+
+        #submitResponse:hover {
+            background: var(--button-hover);
+        }
+
+        /* Sélecteurs de langue */
+        #ui_lang,
+        #output_lang {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            color: var(--text-primary);
+        }
+
+        .theme-btn {
+            position: relative;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+
+        .theme-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .theme-btn.active {
+            background: var(--button-bg);
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        .theme-btn.active:hover {
+            background: var(--button-hover);
+        }
+
+        .theme-btn[title]::after {
+            content: attr(title);
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1f2937;
+            color: #ffffff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+        }
+
+        .theme-btn:hover[title]::after {
+            opacity: 1;
+        }
+
+        [data-theme="light"] .theme-btn {
+            color: #ffffff;
+        }
+
+        [data-theme="dark"] .theme-btn {
+            color: #1f2937;
+        }
+
+        [data-theme="amber"] .theme-btn {
+            color: #78350f;
+        }
+
+        [data-theme="light"] .theme-btn.active {
+            background: #4f46e5;
+        }
+
+        [data-theme="dark"] .theme-btn.active {
+            background: #4f46e5;
+        }
+
+        [data-theme="amber"] .theme-btn.active {
+            background: #d97706;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-gray-900 to-indigo-900 flex flex-col min-h-screen">
+    <div class="flex flex-col w-full h-screen">
+        <!-- En-tête -->
+        <div class="glass-effect p-4 flex items-center justify-between" role="banner">
+            <div class="flex items-center space-x-3">
+                <div class="bg-white/10 p-2 rounded-lg" aria-hidden="true">
+                    <i class="fas fa-robot text-lg text-white"></i>
+                </div>
+                <h1 id="title" class="text-lg font-semibold text-white">ISET Assistant</h1>
+            </div>
+            <div class="flex items-center space-x-3" aria-label="Main navigation">
+                <div id="theme_buttons" class="flex space-x-2">
+                    <button id="theme_light"
+                        class="theme-btn bg-white/10 hover:bg-white/20 p-2 rounded-lg text-white animated-button"
+                        data-theme="light" title="Clair" aria-label="Switch to light theme">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button id="theme_dark"
+                        class="theme-btn bg-white/10 hover:bg-white/20 p-2 rounded-lg text-white animated-button"
+                        data-theme="dark" title="Sombre" aria-label="Switch to dark theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="theme_amber"
+                        class="theme-btn bg-white/10 hover:bg-white/20 p-2 rounded-lg text-white animated-button"
+                        data-theme="amber" title="Ambre" aria-label="Switch to amber theme">
+                        <i class="fas fa-fire"></i>
+                    </button>
+                </div>
+                <button id="historyButton"
+                    class="bg-white/10 hover:bg-white/20 p-2 rounded-lg text-white animated-button"
+                    aria-label="View conversation history">
+                    <i class="fas fa-history"></i>
+                </button>
+           <span class="bg-blue-500 p-2 rounded-lg text-white text-sm font-semibold" aria-label="Current user">
+                    <i class="fas fa-user mr-1"></i>{{ current_user.username }}
+                </span>
+                <a href="{{ url_for('auth.logout') }}"
+                    class="bg-red-500 hover:bg-red-600 p-2 rounded-lg text-white animated-button" aria-label="Log out">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a>
+                <div class="relative">
+                    <select id="ui_lang"
+                        class="bg-white/10 border-0 text-white rounded-lg px-3 py-1.5 text-sm appearance-none focus:ring-0">
+                        <option value="fr" class="bg-gray-800">FR</option>
+                        <option value="en" class="bg-gray-800">EN</option>
+                        <option value="ar" class="bg-gray-800">AR</option>
+                    </select>
+                    <i
+                        class="fas fa-chevron-down text-white/80 absolute right-2 top-2.5 text-xs pointer-events-none"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zone de conversation -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <div id="historyBox" class="hidden flex-1 overflow-y-auto p-4 bg-gray-800 chat-container"
+                aria-label="Conversation history">
+                <div class="flex justify-between items-center mb-3">
+                    <span id="historyLabel" class="text-gray-300 text-sm">Historique</span>
+                    <button id="clearHistoryButton"
+                        class="text-red-400 hover:text-red-600 text-sm flex items-center space-x-1"
+                        aria-label="Clear conversation history">
+                        <i class="fas fa-trash"></i> <span id="clearHistoryLabel">Effacer</span>
+                    </button>
+                </div>
+                <div class="history-content"></div>
+            </div>
+            <div id="chatbox" class="flex-1 overflow-y-auto p-4 bg-gray-800 chat-container">
+                <div class="chat-bubble-bot">Chargement des données initiales...</div>
+            </div>
+
+            <!-- Formulaire d'interaction -->
+            <div class="p-4 bg-gray-800 border-t border-gray-700">
+                <form id="chatForm" enctype="multipart/form-data" class="space-y-3" aria-label="Chat input form">
+                    <input type="hidden" name="csrf_token" id="csrf_token" value="{{ csrf_token }}">
+                    <div class="relative">
+                        <input id="userInput" name="message" type="text"
+                            class="w-full p-3 pr-24 rounded-lg border border-gray-600 focus:border-indigo-500 focus:ring-0 bg-gray-900 text-white placeholder-gray-400"
+                            placeholder="Écrivez votre message..." aria-label="Enter your message">
+                        <div class="absolute right-2 top-1.5 flex space-x-2">
+                            <button type="button" id="cancelInput"
+                                class="animated-button bg-gray-500 text-white p-2 rounded-lg hover:bg-gray-600 hidden"
+                                aria-label="Effacer le texte">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            <button type="submit" id="sendButton"
+                                class="animated-button bg-indigo-600 text-white p-2 rounded-lg hover:bg-indigo-700"
+                                aria-label="Envoyer le message">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            <button type="button" id="recordButton"
+                                class="animated-button bg-green-500 text-white p-2 rounded-lg hover:bg-green-600"
+                                aria-label="Enregistrer la voix">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="micStatus" class="hidden text-red-400 text-sm mt-1">Enregistrement...</div>
+                    <div id="previewBox" class="preview-box hidden" aria-label="Preview of extracted text"></div>
+
+                    <!-- Options avancées -->
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="relative">
+                            <input type="file" id="pdf_file" name="pdf_file" accept=".pdf"
+                                class="opacity-0 absolute w-full h-full cursor-pointer">
+                            <label for="pdf_file"
+                                class="block bg-gray-900 p-2.5 rounded-lg border-2 border-dashed border-gray-600 text-center cursor-pointer hover:border-indigo-500 text-sm text-gray-300">
+                                <i class="fas fa-file-pdf text-red-500 mr-1"></i>
+                                <span id="pdfLabel">PDF</span>
+                            </label>
+                            <button type="button" id="clearPdf"
+                                class="hidden absolute top-1 right-1 text-gray-400 hover:text-gray-600"
+                                aria-label="Effacer le PDF">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="relative">
+                            <input type="file" id="image_file" name="image_file" accept=".png,.jpg,.jpeg"
+                                class="opacity-0 absolute w-full h-full cursor-pointer">
+                            <label for="image_file"
+                                class="block bg-gray-900 p-2.5 rounded-lg border-2 border-dashed border-gray-600 text-center cursor-pointer hover:border-indigo-500 text-sm text-gray-300">
+                                <i class="fas fa-image text-blue-500 mr-1"></i>
+                                <span id="imageLabel">Image</span>
+                            </label>
+                            <button type="button" id="clearImage"
+                                class="hidden absolute top-1 right-1 text-gray-400 hover:text-gray-600"
+                                aria-label="Effacer l'image">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Formulaire pour ajouter une réponse -->
+                    <div id="responseForm" class="hidden p-3 bg-gray-900 border-t border-gray-700 rounded-lg"
+                        role="form" aria-label="Add new response form">
+                        <p id="responsePrompt" class="text-gray-400 text-sm mb-2">Aidez-nous à améliorer ! Fournissez
+                            une réponse correcte :</p>
+                                               <textarea id="userInput" name="message" rows="5"
+                            class="w-full p-3 pr-24 rounded-lg border border-gray-600 focus:border-indigo-500 focus:ring-0 bg-gray-900 text-white placeholder-gray-400"
+                            placeholder="Écrivez votre message..." aria-label="Enter your message"></textarea>                        <input id="newLink" type="text" placeholder="Lien (optionnel)..."
+                            class="w-full p-2 border rounded-lg mt-2 focus:ring-0 focus:border-indigo-500 bg-gray-800 text-white border-gray-600"
+                            aria-label="Lien optionnel">
+                        <select id="newCategory"
+                            class="w-full p-2 border rounded-lg mt-2 focus:ring-0 focus:border-indigo-500 bg-gray-800 text-white border-gray-600"
+                            aria-label="Catégorie">
+                            <option value="Général">Général</option>
+                            <option value="Technique">Technique</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                        <button id="submitResponse"
+                            class="bg-indigo-600 text-white p-2 rounded-lg mt-2 hover:bg-indigo-700 text-sm animated-button"
+                            aria-label="Soumettre la réponse">
+                            Soumettre
+                        </button>
+                    </div>
+                    <!-- Pied de page -->
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+
+                            <div class="relative">
+                                <select id="theme_selector"
+                                    class="bg-white/10 border-0 text-white rounded-lg px-3 py-1.5 text-sm appearance-none focus:ring-0"
+                                    aria-label="Select theme">
+                                    <option value="light" class="bg-gray-800" data-lang-key="themeLight"></option>
+                                    <option value="dark" class="bg-gray-800" data-lang-key="themeDark"></option>
+                                    <option value="amber" class="bg-gray-800" data-lang-key="themeAmber"></option>
+                                </select>
+                                <i
+                                    class="fas fa-chevron-down text-white/80 absolute right-2 top-2.5 text-xs pointer-events-none"></i>
+                            </div>
+                            <select id="output_lang" name="output_lang"
+                                class="bg-gray-900 rounded-lg px-3 py-1.5 border border-gray-600 focus:border-indigo-500 text-white text-sm"
+                                aria-label="Langue de sortie">
+                                <option value="fr">Français</option>
+                                <option value="en">English</option>
+                                <option value="ar">العربية</option>
+                            </select>
+
+                            <label class="flex items-center space-x-1">
+                                <input type="checkbox" id="use_voice"
+                                    class="form-checkbox h-4 w-4 text-indigo-600 rounded border-gray-600 bg-gray-800"
+                                    aria-label="Activer la voix">
+                                <span id="voiceLabel" class="text-gray-400 text-sm">Voix</span>
+                            </label>
+                        </div>
+
+                        <button type="button" id="exportButton"
+                            class="animated-button bg-purple-500 text-white px-3 py-1.5 rounded-lg hover:bg-purple-600 text-sm flex items-center"
+                            aria-label="Exporter en PDF">
+                            <i class="fas fa-file-pdf mr-1"></i>
+                            <span id="exportLabel">Exporter</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script>
+        const translations = {
+            fr: {
+                title: "Chatbot ISET",
+                historyLabel: "Historique",
+                clearHistoryLabel: "Effacer",
+                pdfLabel: "Téléverser un PDF",
+                imageLabel: "Téléverser une image",
+                outputLangLabel: "Langue de la réponse",
+                voiceLabel: "Utiliser la voix",
+                exportLabel: "Exporter en PDF",
+                responsePrompt: "Aidez-nous à améliorer ! Fournissez une réponse correcte :",
+                placeholder: "Posez votre question...",
+                newResponse: "Entrez la réponse correcte...",
+                newLink: "Lien (optionnel)...",
+                submit: "Soumettre",
+                noMatch: "Désolé, je n'ai pas compris.",
+                error: "Erreur",
+                speechNotSupported: "La reconnaissance vocale n'est pas supportée par ce navigateur.",
+                speechError: "Échec de la reconnaissance vocale.",
+                recording: "Enregistrement...",
+                uploading: "Téléversement",
+                networkError: "Erreur réseau",
+                fileUploaded: "Fichier uploadé",
+                responseAdded: "Merci ! Votre réponse a été ajoutée.",
+                noResponse: "Veuillez entrer une réponse.",
+                historyCleared: "Historique vidé.",
+                noConversations: "Aucune conversation à exporter.",
+                exportSuccess: "PDF exporté avec succès.",
+                exporting: "Exportation...",
+                textExtracted: 'Texte extrait prêt à envoyer',
+                previewLabel: "Aperçu du texte extrait :",
+                readAloudLabel: "Lire à haute voix",
+                copyLabel: "Copier",
+                copySuccess: "Texte copié !",
+                copyError: "Échec de la copie.",
+                audioError: "Erreur lors de la lecture de l'audio.",
+                themeLight: "Clair",
+                themeDark: "Sombre",
+                themeAmber: "Ambre"
+
+            },
+            en: {
+                title: "ISET Chatbot",
+                historyLabel: "History",
+                clearHistoryLabel: "Clear",
+                pdfLabel: "Upload a PDF",
+                imageLabel: "Upload an image",
+                outputLangLabel: "Response language",
+                voiceLabel: "Use voice",
+                exportLabel: "Export to PDF",
+                responsePrompt: "Help us improve! Provide a correct answer:",
+                placeholder: "Ask your question...",
+                newResponse: "Enter the correct answer...",
+                newLink: "Link (optional)...",
+                submit: "Submit",
+                noMatch: "Sorry, I didn't understand.",
+                error: "Error",
+                speechNotSupported: "Speech recognition is not supported by this browser.",
+                speechError: "Speech recognition failed.",
+                recording: "Recording...",
+                uploading: "Uploading",
+                networkError: "Network error",
+                fileUploaded: "File uploaded",
+                responseAdded: "Thank you! Your response has been added.",
+                noResponse: "Please enter a response.",
+                historyCleared: "History cleared.",
+                noConversations: "No conversations to export.",
+                exportSuccess: "PDF exported successfully.",
+                exporting: "Exporting...",
+                textExtracted: 'Extracted text ready to send',
+                previewLabel: "Preview of extracted text :",
+                readAloudLabel: "Read aloud",
+                copyLabel: "Copy",
+                copySuccess: "Text copied !",
+                copyError: "Copy failed.",
+                audioError: "Audio reading failed.",
+                themeLight: "Light",
+                themeDark: "Dark",
+                themeAmber: "Amber"
+            },
+            ar: {
+                title: "روبوت الدردشة ISET",
+                historyLabel: "السجل",
+                clearHistoryLabel: "مسح",
+                pdfLabel: "تحميل ملف PDF",
+                imageLabel: "تحميل صورة",
+                outputLangLabel: "لغة الرد",
+                voiceLabel: "استخدام الصوت",
+                exportLabel: "تصدير إلى PDF",
+                responsePrompt: "ساعدنا على التحسين! قدم إجابة صحيحة:",
+                placeholder: "اطرح سؤالك...",
+                newResponse: "أدخل الإجابة الصحيحة...",
+                newLink: "رابط (اختياري)...",
+                submit: "إرسال",
+                noMatch: "عذرًا، لم أفهم.",
+                error: "خطأ",
+                speechNotSupported: "التعرف على الكلام غير مدعوم في هذا المتصفح.",
+                speechError: "فشل التعرف على الكلام.",
+                recording: "جارٍ التسجيل...",
+                uploading: "جارٍ الرفع",
+                networkError: "خطأ في الشبكة",
+                fileUploaded: "تم رفع الملف",
+                responseAdded: "شكرًا! تمت إضافة ردك.",
+                noResponse: "يرجى إدخال رد.",
+                historyCleared: "تم مسح السجل.",
+                noConversations: "لا توجد محادثات للتصدير.",
+                exportSuccess: "تم تصدير PDF بنجاح.",
+                exporting: "جارٍ التصدير...",
+                textExtracted: 'النص المستخرج جاهز للإرسال',
+                previewLabel: "معاينة النص المستخرج :",
+                readAloudLabel: "قراءة بصوت عالٍ",
+                copyLabel: "نسخ",
+                copySuccess: "نسخ بنجاح !",
+                copyError: "فشل النسخ.",
+                audioError: "فشل قراءة الصوت.",
+                themeLight: "فاتح",
+                themeDark: "ظلام",
+                themeAmber: "امبر"
+            }
+        };
+
+        const errorMessages = {
+            'Aucune question ou fichier fourni': {
+                fr: 'Veuillez entrer une question ou téléverser un fichier.',
+                en: 'Please enter a question or upload a file.',
+                ar: 'يرجى إدخال سؤال أو رفع ملف.'
+            },
+            'Fichier PDF invalide': {
+                fr: 'Le fichier doit être un PDF valide.',
+                en: 'The file must be a valid PDF.',
+                ar: 'يجب أن يكون الملف بصيغة PDF صالحة.'
+            },
+            'Fichier image invalide (PNG/JPEG requis)': {
+                fr: 'Seuls les fichiers PNG ou JPEG sont acceptés.',
+                en: 'Only PNG or JPEG files are accepted.',
+                ar: 'يتم قبول ملفات PNG أو JPEG فقط.'
+            },
+            'Fichier PDF trop volumineux (max 5 Mo)': {
+                fr: 'Le PDF dépasse la limite de 5 Mo.',
+                en: 'The PDF exceeds the 5 MB limit.',
+                ar: 'يتجاوز ملف PDF حد 5 ميغابايت.'
+            },
+            'Fichier image trop volumineux (max 5 Mo)': {
+                fr: 'L’image dépasse la limite de 5 Mo.',
+                en: 'The image exceeds the 5 MB limit.',
+                ar: 'تتجاوز الصورة حد 5 ميغابايت.'
+            },
+            'Aucune donnée disponible pour répondre.': {
+                fr: 'Désolé, je n\'ai pas compris.',
+                en: 'Sorry, I didn\'t understand.',
+                ar: 'عذرًا، لم أفهم.'
+            },
+            'Aucun texte détecté dans le PDF.': {
+                fr: 'Aucun texte détecté dans le PDF.',
+                en: 'No text detected in the PDF.',
+                ar: 'لم يتم الكشف عن نص في ملف PDF.'
+            },
+            'Veuillez saisir une question manuellement.': {
+                fr: 'Veuillez saisir une question manuellement.',
+                en: 'Please enter a question manually.',
+                ar: 'يرجى إدخال سؤال يدويًا.'
+            },
+            'Erreur lors du traitement du PDF.': {
+                fr: 'Erreur lors du traitement du PDF. Vérifiez le fichier.',
+                en: 'Error during PDF processing. Check the file.',
+                ar: 'خطأ أثناء معالجة ملف PDF. تحقق من الملف.'
+            },
+            'Fichier PDF introuvable.': {
+                fr: 'Fichier PDF introuvable. Vérifiez le fichier téléversé.',
+                en: 'PDF file not found. Check the uploaded file.',
+                ar: 'ملف PDF غير موجود. تحقق من الملف المرفوع.'
+            },
+            'Erreur : type de fichier non supporté.': {
+                fr: 'Seuls les fichiers PDF sont acceptés.',
+                en: 'Only PDF files are accepted.',
+                ar: 'يتم قبول ملفات PDF فقط.'
+            }
+        };
+
+        const chatbox = document.getElementById('chatbox');
+        const historyBox = document.getElementById('historyBox');
+        const chatForm = document.getElementById('chatForm');
+        const userInput = document.getElementById('userInput');
+        const sendButton = document.getElementById('sendButton');
+        const recordButton = document.getElementById('recordButton');
+        const historyButton = document.getElementById('historyButton');
+        const exportButton = document.getElementById('exportButton');
+        const responseForm = document.getElementById('responseForm');
+        const newResponse = document.getElementById('newResponse');
+        const newLink = document.getElementById('newLink');
+        const newCategory = document.getElementById('newCategory');
+        const submitResponse = document.getElementById('submitResponse');
+        const themeButtons = document.querySelectorAll('.theme-btn'); // Sélectionne tous les boutons de thème
+        const uiLang = document.getElementById('ui_lang');
+        const micStatus = document.getElementById('micStatus');
+        const previewBox = document.getElementById('previewBox'); const themeSelector = document.getElementById('theme_selector');
+
+        let recognition;
+        let isRecognizing = false;
+        let conversations = JSON.parse(localStorage.getItem('conversations')) || [];
+
+
+        // Appliquer le thème sauvegardé ou par défaut
+        function applyTheme(theme) {
+            document.body.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateInterfaceTheme(theme);
+            // Mettre à jour l'état actif des boutons
+            themeButtons.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.theme === theme);
+            });
+        }
+        // Mettre à jour les info-bulles des boutons de thème selon la langue
+        function updateThemeButtonTooltips(lang) {
+            const t = translations[lang];
+            document.getElementById('theme_light').setAttribute('title', t.themeLight || 'Clair');
+            document.getElementById('theme_dark').setAttribute('title', t.themeDark || 'Sombre');
+            document.getElementById('theme_amber').setAttribute('title', t.themeAmber || 'Ambre');
+        }
+        // Mettre à jour les éléments de l'interface pour refléter le thème
+        function updateInterfaceTheme(theme) {
+            // Vous pouvez ajouter ici des modifications spécifiques à l'interface si nécessaire
+        }
+
+        // Charger le thème sauvegardé au démarrage
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            applyTheme(savedTheme);
+            updateInterfaceLang(uiLang.value); // Met à jour les info-bulles dès le chargement
+        });
+
+        // Gérer les clics sur les boutons de thème
+        themeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedTheme = button.dataset.theme;
+                applyTheme(selectedTheme);
+            });
+        });
+
+        // Gérer le changement de thème
+        themeSelector.addEventListener('change', (e) => {
+            const selectedTheme = e.target.value;
+            applyTheme(selectedTheme);
+        });
+
+        function updateThemeSelectorOptions(lang) {
+            const options = themeSelector.querySelectorAll('option');
+            options.forEach(option => {
+                const key = option.dataset.langKey;
+                if (key) {
+                    option.textContent = getTranslation(key, lang);
+                }
+            });
+        }
+        function escapeHTML(str) {
+            // Gérer les cas où str est undefined, null, ou non une chaîne
+            if (typeof str !== 'string' || str == null) {
+                return '';
+            }
+            return str.replace(/[&<>"']/g, match => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+            }[match]));
+        }
+
+
+        function getTranslation(key, lang, fallback = key) {
+            const validLang = translations[lang] ? lang : 'fr';
+            return translations[validLang][key] || translations['fr'][key] || fallback;
+        }
+
+        // Gestion de l'upload de PDF
+        document.getElementById('pdf_file').addEventListener('change', async (e) => {
+            const label = document.getElementById('pdfLabel');
+            const clearBtn = document.getElementById('clearPdf');
+            const pdfFile = e.target.files[0];
+
+            if (pdfFile) {
+                label.textContent = `${getTranslation('pdfLabel', uiLang.value).split(':')[0]} : ${pdfFile.name}`;
+                clearBtn.classList.remove('hidden');
+
+                try {
+                    const formData = new FormData();
+                    formData.append('pdf_file', pdfFile);
+                    formData.append('output_lang', document.getElementById('output_lang').value);
+                    formData.append('tts', document.getElementById('use_voice').checked);
+                    formData.append('csrf_token', document.getElementById('csrf_token').value);
+
+                    addMessage(`${getTranslation('uploading', uiLang.value)}...`, false);
+                    const response = await fetch('/chat', {
+                        method: 'POST',
+                        headers: {
+                            'X-CSRFToken': document.getElementById('csrf_token').value
+                        },
+                        body: formData
+                    });
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(errorData.error || errorData.extracted_text || getTranslation('networkError', uiLang.value));
+                    }
+
+                    const data = await response.json();
+                    console.log('Réponse /chat pour PDF:', data);
+                    if (data.error) {
+                        addMessage(`${getTranslation('error', uiLang.value)} : ${errorMessages[data.error]?.[uiLang.value] || data.error}`, false);
+                        showToast(`${getTranslation('error', uiLang.value)} : ${errorMessages[data.error]?.[uiLang.value] || data.error}`, 'error');
+                        return;
+                    }
+
+                    const extractedText = data.extracted_text || '';
+                    if (extractedText && ![
+                        "Aucun texte détecté dans le PDF.",
+                        "Erreur lors de l'extraction du texte.",
+                        "Fichier PDF introuvable.",
+                        "Erreur : type de fichier non supporté."
+                    ].includes(extractedText)) {
+                        previewBox.innerHTML = `<strong>${getTranslation('previewLabel', uiLang.value)}</strong><br>${escapeHTML(extractedText.slice(0, 500))}${extractedText.length > 500 ? '...' : ''}`;
+                        previewBox.classList.remove('hidden');
+                        userInput.value = extractedText.trim().slice(0, 1000);
+                        toggleCancelButton();
+                        addMessage(`${getTranslation('textExtracted', uiLang.value)}`, false);
+                    } else {
+                        addMessage(`${getTranslation('error', uiLang.value)} : ${errorMessages[extractedText]?.[uiLang.value] || extractedText || getTranslation('noTextExtracted', uiLang.value)}`, false);
+                        showToast(`${getTranslation('error', uiLang.value)} : ${errorMessages[extractedText]?.[uiLang.value] || extractedText || getTranslation('noTextExtracted', uiLang.value)}`, 'error');
+                        previewBox.classList.add('hidden');
+                        return;
+                    }
+
+                } catch (error) {
+                    addMessage(`${getTranslation('error', uiLang.value)} : ${error.message}`, false);
+                    showToast(`${getTranslation('error', uiLang.value)} : ${error.message}`, 'error');
+                    console.error('Erreur lors de l\'upload de PDF:', error);
+                    previewBox.classList.add('hidden');
+                }
+            } else {
+                label.textContent = getTranslation('pdfLabel', uiLang.value);
+                clearBtn.classList.add('hidden');
+                userInput.value = '';
+                previewBox.classList.add('hidden');
+                toggleCancelButton();
+            }
+        });
+
+        // Fonction pour afficher un toast
+        function showToast(message, type = 'error') {
+            const toast = document.createElement('div');
+            toast.className = `fixed top-4 right-4 p-4 rounded-lg text-white ${type === 'error' ? 'bg-red-500' : 'bg-green-500'}`;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        // Gestion de l'upload d'image
+
+        document.getElementById('image_file').addEventListener('change', async (e) => {
+            const label = document.getElementById('imageLabel');
+            const clearBtn = document.getElementById('clearImage');
+            const imageFile = e.target.files[0];
+
+            if (imageFile) {
+                label.textContent = `${getTranslation('imageLabel', uiLang.value).split(':')[0]} : ${imageFile.name}`;
+                clearBtn.classList.remove('hidden');
+
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    const img = document.createElement('img');
+                    img.src = event.target.result;
+                    img.className = 'mt-2 max-w-full rounded-lg';
+                    img.style.maxHeight = '100px';
+                    chatbox.appendChild(img);
+                    chatbox.scrollTop = chatbox.scrollHeight;
+                };
+                reader.readAsDataURL(imageFile);
+
+                try {
+                    const formData = new FormData();
+                    formData.append('image_file', imageFile);
+                    formData.append('output_lang', document.getElementById('output_lang').value);
+                    formData.append('tts', document.getElementById('use_voice').checked);
+                    formData.append('csrf_token', document.getElementById('csrf_token').value);
+
+                    addMessage(`${getTranslation('uploading', uiLang.value)}...`, false);
+                    const response = await fetch('/chat', {
+                        method: 'POST',
+                        headers: {
+                            'X-CSRFToken': document.getElementById('csrf_token').value
+                        },
+                        body: formData
+                    });
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(errorData.extracted_text || errorData.error || getTranslation('networkError', uiLang.value));
+                    }
+
+                    const data = await response.json();
+                    console.log('Réponse /chat pour image:', data);
+                    if (data.error) {
+                        addMessage(`${getTranslation('error', uiLang.value)} : ${errorMessages[data.error]?.[uiLang.value] || data.error}`, false);
+                        return;
+                    }
+
+                    const extractedText = data.extracted_text || '';
+                    if (extractedText && ![
+                        "Aucun texte détecté dans l'image.",
+                        "Erreur lors de l'extraction du texte.",
+                        "Fichier image introuvable.",
+                        "Image trop petite pour l'extraction de texte.",
+                        "Image non valide pour l'extraction de texte (faible contraste ou contenu)."
+                    ].includes(extractedText)) {
+                        previewBox.innerHTML = `<strong>${getTranslation('previewLabel', uiLang.value)}</strong><br>${escapeHTML(extractedText.slice(0, 500))}${extractedText.length > 500 ? '...' : ''}`;
+                        previewBox.classList.remove('hidden');
+                        userInput.value = extractedText.trim().slice(0, 1000);
+                        toggleCancelButton();
+                        addMessage(`${getTranslation('textExtracted', uiLang.value)}`, false);
+                    } else {
+                        addMessage(`${getTranslation('error', uiLang.value)} : ${errorMessages[extractedText]?.[uiLang.value] || extractedText || getTranslation('noTextExtracted', uiLang.value)}`, false);
+                        previewBox.classList.add('hidden');
+                        return;
+                    }
+
+                } catch (error) {
+                    addMessage(`${getTranslation('error', uiLang.value)} : ${error.message}`, false);
+                    console.error('Erreur lors de l\'upload d\'image:', error);
+                    previewBox.classList.add('hidden');
+                }
+            } else {
+                label.textContent = getTranslation('imageLabel', uiLang.value);
+                clearBtn.classList.add('hidden');
+                userInput.value = '';
+                previewBox.classList.add('hidden');
+                toggleCancelButton();
+            }
+        });
+
+        // Gestion des boutons clear
+        function clearFileInput(fileInputId, labelId, clearBtnId) {
+            document.getElementById(fileInputId).value = '';
+            document.getElementById(labelId).textContent = getTranslation(labelId === 'pdfLabel' ? 'pdfLabel' : 'imageLabel', uiLang.value);
+            document.getElementById(clearBtnId).classList.add('hidden');
+            userInput.value = '';
+            previewBox.classList.add('hidden');
+            toggleCancelButton();
+        }
+
+        document.getElementById('clearPdf').addEventListener('click', () => clearFileInput('pdf_file', 'pdfLabel', 'clearPdf'));
+        document.getElementById('clearImage').addEventListener('click', () => clearFileInput('image_file', 'imageLabel', 'clearImage'));
+
+
+
+        chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            stopRecognition();
+
+            //const formData = new FormData(chatForm);
+            const formData = new FormData(chatForm);
+            formData.append('tts', document.getElementById('use_voice').checked);
+            const message = userInput.value.trim();
+            const pdfFile = formData.get('pdf_file');
+            const imageFile = formData.get('image_file');
+
+            if (!message && !pdfFile.name && !imageFile.name) {
+                addMessage(errorMessages['Aucune question ou fichier fourni'][uiLang.value] || getTranslation('noQuestionOrFile', uiLang.value), false);
+                return;
+            }
+
+            if (pdfFile.name && (pdfFile.size > 5 * 1024 * 1024 || !pdfFile.name.endsWith('.pdf'))) {
+                addMessage(errorMessages['Fichier PDF invalide'][uiLang.value] || getTranslation('invalidPDF', uiLang.value), false);
+                return;
+            }
+            if (imageFile.name && (imageFile.size > 5 * 1024 * 1024 || !['image/png', 'image/jpeg'].includes(imageFile.type))) {
+                addMessage(errorMessages['Fichier image invalide (PNG/JPEG requis)'][uiLang.value] || getTranslation('invalidImage', uiLang.value), false);
+                return;
+            }
+
+            console.log('Message envoyé:', message);
+            sendButton.disabled = true;
+            sendButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
+            if (message) {
+                addMessage(message, true);
+                previewBox.classList.add('hidden');
+            }
+
+            try {
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', '/chat', true);
+                xhr.upload.onprogress = (event) => {
+                    if (event.lengthComputable) {
+                        const percent = (event.loaded / event.total) * 100;
+                        addMessage(`${getTranslation('uploading', uiLang.value)} : ${Math.round(percent)}%`, false);
+                    }
+                };
+                xhr.onload = () => {
+                    if (xhr.status === 200) {
+                        const data = JSON.parse(xhr.responseText);
+                        console.log('Réponse /chat pour message:', data);
+                        if (data.error) {
+                            throw new Error(errorMessages[data.error]?.[uiLang.value] || data.error);
+                        }
+                        const conversation = {
+                            question: message || getTranslation('fileUploaded', uiLang.value),
+                            answer: data.answer || getTranslation('noMatch', uiLang.value),
+                            link: data.link || '',
+                            category: data.category || 'Général',
+                            response_id: data.response_id || '',
+                            rating: 'Non évalué'
+                        };
+                        conversations.push(conversation);
+                        if (conversations.length > 100) conversations = conversations.slice(-100);
+                        localStorage.setItem('conversations', JSON.stringify(conversations));
+                        addMessage(data.answer, false, data);
+                        updateHistory();
+                        if (data.ask_for_response || data.confidence < 0.3) {
+                            responseForm.classList.remove('hidden');
+                            responseForm.dataset.question = message || getTranslation('fileUploaded', uiLang.value);
+                        }
+                        if (chatbox.querySelector('.chat-bubble-bot')?.textContent.includes('Chargement')) {
+                            chatbox.querySelector('.chat-bubble-bot').remove();
+                        }
+                        // Play audio if available
+                        if (data.audio_url) {
+                            const audio = new Audio(data.audio_url);
+                            audio.play().catch(err => {
+                                addMessage(`${getTranslation('audioError', uiLang.value)} : ${err.message}`, false);
+                            });
+                        } else if (data.audio_error) {
+                            addMessage(`${getTranslation('audioError', uiLang.value)} : ${data.audio_error}`, false);
+                        }
+                    } else {
+                        const errorData = JSON.parse(xhr.responseText);
+                        throw new Error(errorMessages[errorData.error]?.[uiLang.value] || errorData.error || getTranslation('networkError', uiLang.value));
+                    }
+                };
+                xhr.onerror = () => {
+                    throw new Error(getTranslation('networkError', uiLang.value));
+                };
+                xhr.send(formData);
+            } catch (error) {
+                addMessage(`${getTranslation('error', uiLang.value)} : ${error.message}`, false);
+                console.error('Erreur chat:', error);
+            } finally {
+                sendButton.disabled = false;
+                sendButton.innerHTML = '<i class="fas fa-paper-plane"></i>';
+                userInput.value = '';
+                previewBox.classList.add('hidden');
+                toggleCancelButton();
+            }
+        });
+
+
+        function addMessage(content, isUser, data = {}) {
+            const div = document.createElement('div');
+            div.className = isUser ? 'chat-bubble-user' : 'chat-bubble-bot';
+            div.setAttribute('role', 'region');
+            div.setAttribute('aria-live', 'polite');
+            div.focus();
+
+            if (isUser) {
+                div.textContent = escapeHTML(content);
+            } else {
+                const contentDiv = document.createElement('div');
+                const displayAnswer = escapeHTML(content) || translations[uiLang.value].noMatch;
+                contentDiv.innerHTML = `<strong>Chatbot :</strong> ${displayAnswer}`;
+                if (data.extracted_text) {
+                    contentDiv.innerHTML += `<br><strong>Contenu extrait :</strong> ${escapeHTML(data.extracted_text)}`;
+                }
+                if (data.link && isValidURL(data.link)) {
+                    const link = document.createElement('a');
+                    link.href = escapeHTML(data.link);
+                    link.className = 'text-blue-500 underline';
+                    link.target = '_blank';
+                    link.textContent = translations[uiLang.value].link || 'Lien';
+                    contentDiv.appendChild(document.createElement('br'));
+                    contentDiv.appendChild(link);
+                }
+                if (data.audio_url) {
+                    contentDiv.innerHTML += `<br><small>Audio généré pour la réponse.</small>`;
+                }
+                /*if (data.audio) {
+                    const audio = document.createElement('audio');
+                    audio.controls = true;
+                    audio.src = data.audio;
+                    audio.onerror = () => addMessage("Erreur : Impossible de lire l'audio.", false);
+                    contentDiv.appendChild(document.createElement('br'));
+                    contentDiv.appendChild(audio);
+                }*/
+                if (data.response_id) {
+                    const ratingDiv = document.createElement('div');
+                    ratingDiv.className = 'mt-2';
+                    const isLiked = data.rating === 'like';
+                    const isDisliked = data.rating === 'dislike';
+                    ratingDiv.innerHTML = `
+                <button class="like-btn ${isLiked ? 'active' : isDisliked ? 'inactive' : 'text-green-500'} hover:text-green-700" data-id="${data.response_id}" ${isLiked || isDisliked ? 'disabled' : ''}>
+                    <i class="fas fa-thumbs-up"></i>
+                </button>
+                <button class="dislike-btn ${isDisliked ? 'active' : isLiked ? 'inactive' : 'text-red-500'} hover:text-red-700" data-id="${data.response_id}" ${isLiked || isDisliked ? 'disabled' : ''}>
+                    <i class="fas fa-thumbs-down"></i>
+                </button>
+                <button class="read-btn text-blue-500 hover:text-blue-700" data-text="${escapeHTML(content)}" data-lang="${document.getElementById('output_lang').value}">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <button class="copy-btn text-blue-500 hover:text-blue-700" data-text="${escapeHTML(content)}">
+                    <i class="fas fa-copy"></i>
+                </button>
+            `;
+                    contentDiv.appendChild(ratingDiv);
+                }
+                div.appendChild(contentDiv);
+            }
+            chatbox.appendChild(div);
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        function isValidURL(str) {
+            try {
+                new URL(str);
+                return true;
+            } catch {
+                return false;
+            }
+        }
+
+        function debounce(fn, ms) {
+            let timeout;
+            return (...args) => {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => fn(...args), ms);
+            };
+        }
+
+
+
+        function updateHistory(page = 1, perPage = 20) {
+            const contentDiv = historyBox.querySelector('.history-content') || document.createElement('div');
+            contentDiv.className = 'history-content';
+            contentDiv.innerHTML = '';
+            const start = (page - 1) * perPage;
+            const end = start + perPage;
+            const paginatedConversations = conversations.slice(start, end);
+            paginatedConversations.forEach(conv => {
+                const userDiv = document.createElement('div');
+                userDiv.className = 'chat-bubble-user';
+                userDiv.textContent = escapeHTML(conv.question);
+                contentDiv.appendChild(userDiv);
+
+                const botDiv = document.createElement('div');
+                botDiv.className = 'chat-bubble-bot';
+                botDiv.innerHTML = `
+                <strong>Chatbot :</strong> ${escapeHTML(conv.answer)}
+                ${conv.link && isValidURL(conv.link) ? `<br><a href="${escapeHTML(conv.link)}" class="text-blue-500 underline" target="_blank">${translations[uiLang.value].link || 'Lien'}</a>` : ''}
+                <br><strong>Catégorie :</strong> ${escapeHTML(conv.category)}
+                <br><strong>Évaluation :</strong> ${escapeHTML(conv.rating)}
+            `;
+                contentDiv.appendChild(botDiv);
+            });
+            if (!historyBox.querySelector('.history-content')) {
+                historyBox.appendChild(contentDiv);
+            }
+            const pagination = document.createElement('div');
+            pagination.className = 'flex justify-center mt-4';
+            pagination.innerHTML = `
+            <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg disabled:opacity-50" 
+                    ${page === 1 ? 'disabled' : ''} 
+                    onclick="updateHistory(${page - 1}, ${perPage})">${translations[uiLang.value].previous || 'Précédent'}</button>
+            <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg ml-2" 
+                    ${end >= conversations.length ? 'disabled' : ''} 
+                    onclick="updateHistory(${page + 1}, ${perPage})">${translations[uiLang.value].next || 'Suivant'}</button>
+        `;
+            contentDiv.appendChild(pagination);
+            historyBox.scrollTop = historyBox.scrollHeight;
+        }
+
+        // Mettre à jour l'interface selon la langue
+        function updateInterfaceLang(lang) {
+            const t = translations[lang];
+            document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            const elements = {
+                title: document.getElementById('title'),
+                historyLabel: document.getElementById('historyLabel'),
+                clearHistoryLabel: document.getElementById('clearHistoryLabel'),
+                pdfLabel: document.getElementById('pdfLabel'),
+                imageLabel: document.getElementById('imageLabel'),
+                outputLangLabel: document.getElementById('outputLangLabel'),
+                voiceLabel: document.getElementById('voiceLabel'),
+                exportLabel: document.getElementById('exportLabel'),
+                responsePrompt: document.getElementById('responsePrompt'),
+                userInput: document.getElementById('userInput'),
+                newResponse: document.getElementById('newResponse'),
+                newLink: document.getElementById('newLink'),
+                submitResponse: document.getElementById('submitResponse')
+            };
+            if (elements.title) elements.title.textContent = t.title;
+            if (elements.historyLabel) elements.historyLabel.textContent = t.historyLabel;
+            if (elements.clearHistoryLabel) elements.clearHistoryLabel.textContent = t.clearHistoryLabel;
+            if (elements.pdfLabel) elements.pdfLabel.textContent = t.pdfLabel;
+            if (elements.imageLabel) elements.imageLabel.textContent = t.imageLabel;
+            if (elements.outputLangLabel) elements.outputLangLabel.textContent = t.outputLangLabel;
+            if (elements.voiceLabel) elements.voiceLabel.textContent = t.voiceLabel;
+            if (elements.exportLabel) elements.exportLabel.textContent = t.exportLabel;
+            if (elements.responsePrompt) elements.responsePrompt.textContent = t.responsePrompt;
+            if (elements.userInput) elements.userInput.placeholder = t.placeholder;
+            if (elements.newResponse) elements.newResponse.placeholder = t.newResponse;
+            if (elements.newLink) elements.newLink.placeholder = t.newLink;
+            if (elements.submitResponse) elements.submitResponse.textContent = t.submit;
+
+            // Mettre à jour les info-bulles des boutons de thème
+            updateThemeButtonTooltips(lang);
+
+            updateHistory();
+        }
+
+        // Speech Recognition
+
+        if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
+            recognition.continuous = true;
+            recognition.interimResults = true;
+            recognition.maxAlternatives = 1;
+
+            recognition.onresult = (event) => {
+                let interimTranscript = '';
+                let finalTranscript = '';
+
+                for (let i = event.resultIndex; i < event.results.length; i++) {
+                    const transcript = event.results[i][0].transcript;
+                    if (event.results[i].isFinal) {
+                        finalTranscript += transcript + ' ';
+                    } else {
+                        interimTranscript += transcript;
+                    }
+                }
+                userInput.value = finalTranscript + interimTranscript;
+                userInput.focus();
+                userInput.selectionStart = userInput.selectionEnd = userInput.value.length;
+                toggleCancelButton();
+            };
+
+
+
+            recognition.onerror = (event) => {
+                addMessage(`${translations[uiLang.value].error}: ${translations[uiLang.value].speechError} (${event.error})`, false);
+                stopRecognition();
+            };
+
+            recognition.onend = () => {
+                if (isRecognizing) {
+                    try {
+                        recognition.start();
+                    } catch (error) {
+                        addMessage(`${translations[uiLang.value].error}: ${error.message}`, false);
+                        stopRecognition();
+                    }
+                } else {
+                    recordButton.classList.remove('recording', 'bg-red-500', 'animate-pulse');
+                    recordButton.classList.add('bg-green-500', 'hover:bg-green-600');
+                    micStatus.classList.add('hidden');
+                }
+            };
+            // Nouvelle fonction de gestion de l'enregistrement
+
+        }
+        function toggleRecording() {
+            if (!isRecognizing) {
+                startRecognition();
+            } else {
+                stopRecognition();
+            }
+        }
+
+
+
+        function startRecognition() {
+            if (!recognition) return;
+            recognition.lang = uiLang.value === 'ar' ? 'ar-SA' : uiLang.value === 'en' ? 'en-US' : 'fr-FR';
+            try {
+                userInput.value = '';
+                recognition.start();
+                isRecognizing = true;
+                recordButton.classList.add('bg-red-500', 'hover:bg-red-600', 'animate-pulse');
+                recordButton.classList.remove('bg-green-500');
+                micStatus.classList.remove('hidden');
+                micStatus.textContent = translations[uiLang.value].recording;
+            } catch (error) {
+                addMessage(`${translations[uiLang.value].error} : ${error.message}`, false);
+            }
+        }
+
+        function stopRecognition() {
+            if (!recognition) return;
+            recognition.stop();
+            isRecognizing = false;
+            recordButton.classList.remove('bg-red-500', 'hover:bg-red-600', 'animate-pulse');
+            recordButton.classList.add('bg-green-500');
+            micStatus.classList.add('hidden');
+        }
+
+        // Gestionnaire d'événement pour le bouton d'enregistrement
+        recordButton.addEventListener('click', toggleRecording);
+
+        // Gestionnaire pour le bouton d'annulation
+        document.getElementById('cancelInput').addEventListener('click', () => {
+            userInput.value = '';
+            toggleCancelButton();
+        });
+
+        function toggleCancelButton() {
+            document.getElementById('cancelInput').classList.toggle('hidden', !userInput.value);
+        }
+
+        userInput.addEventListener('input', toggleCancelButton);
+
+        chatbox.addEventListener('click', async (e) => {
+            const button = e.target.closest('.like-btn, .dislike-btn, .read-btn, .copy-btn');
+            if (!button) return;
+
+            if (button.classList.contains('like-btn') || button.classList.contains('dislike-btn')) {
+                const responseId = button.dataset.id;
+                const rating = button.classList.contains('like-btn') ? 'like' : 'dislike';
+
+                try {
+                    const res = await fetch('/rate', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRFToken': document.getElementById('csrf_token').value
+                        },
+                        body: JSON.stringify({ response_id: responseId, rating })
+                    });
+                    if (!res.ok) {
+                        const errorData = await res.json();
+                        throw new Error(errorMessages[errorData.error]?.[uiLang.value] || errorData.error || 'Erreur lors de l’enregistrement de l’évaluation');
+                    }
+                    const data = await res.json();
+                    if (data.error) throw new Error(errorMessages[data.error]?.[uiLang.value] || data.error);
+
+                    // Update button states
+                    const parent = button.parentElement;
+                    const likeBtn = parent.querySelector('.like-btn');
+                    const dislikeBtn = parent.querySelector('.dislike-btn');
+                    if (rating === 'like') {
+                        likeBtn.classList.add('active');
+                        likeBtn.classList.remove('inactive', 'text-green-500');
+                        dislikeBtn.classList.add('inactive');
+                        dislikeBtn.classList.remove('active', 'text-red-500');
+                    } else {
+                        dislikeBtn.classList.add('active');
+                        dislikeBtn.classList.remove('inactive', 'text-red-500');
+                        likeBtn.classList.add('inactive');
+                        likeBtn.classList.remove('active', 'text-green-500');
+                    }
+                    likeBtn.disabled = false;
+                    dislikeBtn.disabled = false;
+
+                    // Update conversation rating
+                    const index = conversations.findIndex(c => c.response_id === responseId);
+                    if (index !== -1) {
+                        conversations[index].rating = rating;
+                        localStorage.setItem('conversations', JSON.stringify(conversations));
+                        updateHistory();
+                    }
+                } catch (error) {
+                    addMessage(`${translations[uiLang.value].error || 'Erreur'} : ${error.message}`, false);
+                    console.error('Erreur rate:', error);
+                }
+            } else if (button.classList.contains('read-btn')) {
+                const text = button.dataset.text;
+                const lang = button.dataset.lang === 'ar' ? 'ar-SA' : button.dataset.lang === 'en' ? 'en-US' : 'fr-FR';
+                try {
+                    speechSynthesis.cancel(); // Stop any ongoing speech
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    utterance.lang = lang;
+                    button.classList.add('active');
+                    utterance.onend = () => button.classList.remove('active');
+                    speechSynthesis.speak(utterance);
+                } catch (error) {
+                    addMessage(`${translations[uiLang.value].error} : ${error.message}`, false);
+                    console.error('Erreur lecture:', error);
+                }
+            } else if (button.classList.contains('copy-btn')) {
+                const text = button.dataset.text;
+                try {
+                    await navigator.clipboard.writeText(text);
+                    button.classList.add('copied');
+                    button.innerHTML = '<i class="fas fa-check"></i>';
+                    setTimeout(() => {
+                        button.classList.remove('copied');
+                        button.innerHTML = '<i class="fas fa-copy"></i>';
+                    }, 2000);
+                    addMessage(getTranslation('copySuccess', uiLang.value), false);
+                } catch (error) {
+                    addMessage(`${getTranslation('copyError', uiLang.value)} : ${error.message}`, false);
+                    console.error('Erreur copie:', error);
+                }
+            }
+        });
+
+        /*chatbox.addEventListener('click', async (e) => {
+            if (e.target.classList.contains('like-btn') || e.target.classList.contains('dislike-btn')) {
+                const responseId = e.target.dataset.id;
+                const rating = e.target.classList.contains('like-btn') ? 'like' : 'dislike';
+                try {
+                    const res = await fetch('/rate', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRFToken': document.getElementById('csrf_token').value
+                        },
+                        body: JSON.stringify({ response_id: responseId, rating })
+                    });
+                    if (!res.ok) {
+                        const errorData = await res.json();
+                        throw new Error(errorMessages[errorData.error]?.[uiLang.value] || errorData.error || 'Erreur lors de l’enregistrement de l’évaluation');
+                    }
+                    const data = await res.json();
+                    if (data.error) throw new Error(errorMessages[data.error]?.[uiLang.value] || data.error);
+
+                    const otherBtn = e.target.classList.contains('like-btn')
+                        ? e.target.parentElement.querySelector('.dislike-btn')
+                        : e.target.parentElement.querySelector('.like-btn');
+                    e.target.classList.add('text-yellow-500', 'font-bold');
+                    otherBtn.classList.remove('text-yellow-500', 'font-bold');
+                    e.target.disabled = true;
+                    otherBtn.disabled = true;
+                    const index = conversations.findIndex(c => c.response_id === responseId);
+                    if (index !== -1) {
+                        conversations[index].rating = rating;
+                        localStorage.setItem('conversations', JSON.stringify(conversations));
+                        updateHistory();
+                    }
+                } catch (error) {
+                    addMessage(`${translations[uiLang.value].error || 'Erreur'} : ${error.message}`, false);
+                    console.error('Erreur rate:', error);
+                }
+            }
+        });
+*/
+        historyButton.addEventListener('click', () => {
+            historyBox.classList.toggle('hidden');
+            chatbox.classList.toggle('hidden');
+            if (!historyBox.classList.contains('hidden')) {
+                updateHistory();
+            }
+        });
+
+        exportButton.addEventListener('click', async () => {
+            if (!conversations || conversations.length === 0) {
+                addMessage(`${translations[uiLang.value].error || 'Erreur'} : ${translations[uiLang.value].noConversations || 'Aucune conversation à exporter.'}`, false);
+                return;
+            }
+
+            exportButton.disabled = true;
+            exportButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ' + (translations[uiLang.value].exporting || 'Exportation...');
+            try {
+                const response = await fetch('/export_conversations', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': document.getElementById('csrf_token').value
+                    },
+                    body: JSON.stringify({ conversations })
+                });
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorMessages[errorData.error]?.[uiLang.value] || errorData.error || 'Erreur lors de l’exportation du PDF');
+                }
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'conversation.pdf';
+                a.click();
+                window.URL.revokeObjectURL(url);
+                addMessage(translations[uiLang.value].exportSuccess || "PDF exporté avec succès.", false);
+            } catch (error) {
+                addMessage(`${translations[uiLang.value].error || 'Erreur'} : ${error.message}`, false);
+                console.error('Erreur export PDF:', error);
+            } finally {
+                exportButton.disabled = false;
+                exportButton.innerHTML = '<i class="fas fa-file-pdf mr-2"></i> <span id="exportLabel">' + (translations[uiLang.value].exportLabel || 'Exporter') + '</span>';
+            }
+        });
+
+        userInput.addEventListener('keypress', debounce((e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendButton.click();
+            }
+        }, 200));
+
+
+        /*document.getElementById('pdf_file').addEventListener('change', (e) => {
+            const label = document.getElementById('pdfLabel');
+            const clearBtn = document.getElementById('clearPdf');
+            if (e.target.files[0]) {
+                label.textContent = `${translations[uiLang.value].pdfLabel.split(':')[0]} : ${e.target.files[0].name}`;
+                clearBtn.classList.remove('hidden');
+            } else {
+                label.textContent = translations[uiLang.value].pdfLabel;
+                clearBtn.classList.add('hidden');
+            }
+        });*/
+
+        document.getElementById('clearPdf').addEventListener('click', () => {
+            document.getElementById('pdf_file').value = '';
+            document.getElementById('pdfLabel').textContent = translations[uiLang.value].pdfLabel;
+            document.getElementById('clearPdf').classList.add('hidden');
+        });
+
+
+
+        document.getElementById('clearHistoryButton').addEventListener('click', () => {
+            conversations = [];
+            localStorage.setItem('conversations', JSON.stringify(conversations));
+            historyBox.querySelector('.history-content').innerHTML = `<p class="text-gray-500">${translations[uiLang.value].historyCleared || 'Historique vidé.'}</p>`;
+        });
+
+        updateInterfaceLang(uiLang.value);
+
+        // Focus management for form submission
+        document.getElementById('chatForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            // Existing submission logic
+            document.getElementById('userInput').focus();
+        });
+
+        // Add keyboard navigation for theme buttons
+        document.querySelectorAll('.theme-btn').forEach(button => {
+            button.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    button.click();
+                }
+            });
+        });
+
+
+
+
+        function showTypingIndicator() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'chat-bubble-bot typing-indicator';
+            typingDiv.innerHTML = '<span class="animate-pulse">...</span>';
+            document.getElementById('chatbox').appendChild(typingDiv);
+            document.getElementById('chatbox').scrollTop = document.getElementById('chatbox').scrollHeight;
+            return typingDiv;
+        }
+
+        function removeTypingIndicator(typingDiv) {
+            if (typingDiv) typingDiv.remove();
+        }
+
+        document.getElementById('chatForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            stopRecognition();
+            const formData = new FormData(document.getElementById('chatForm'));
+            formData.append('tts', document.getElementById('use_voice').checked);
+            const message = document.getElementById('userInput').value.trim();
+            if (!message && !formData.get('pdf_file').name && !formData.get('image_file').name) {
+                addMessage(errorMessages['Aucune question ou fichier fourni'][uiLang.value], false);
+                return;
+            }
+
+            const typingDiv = showTypingIndicator();
+            try {
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', '/chat', true);
+                xhr.upload.onprogress = (event) => {
+                    if (event.lengthComputable) {
+                        const percent = (event.loaded / event.total) * 100;
+                        addMessage(`${getTranslation('uploading', uiLang.value)} : ${Math.round(percent)}%`, false);
+                    }
+                };
+                xhr.onload = () => {
+                    removeTypingIndicator(typingDiv);
+                    // Existing response handling
+                };
+                xhr.onerror = () => {
+                    removeTypingIndicator(typingDiv);
+                    // Existing error handling
+                };
+                xhr.send(formData);
+            } catch (error) {
+                removeTypingIndicator(typingDiv);
+                // Existing error handling
+            }
+        });
+    </script>
+</body>
+
+</html>

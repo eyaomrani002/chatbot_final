@@ -1,0 +1,21 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.chatbox {
+    scrollbar-width: thin;
+    scrollbar-color: #c7d2fe #f0f4ff;
+}
+
+.chatbox::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chatbox::-webkit-scrollbar-track {
+    background: #f0f4ff;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+    background-color: #c7d2fe;
+    border-radius: 20px;
+}

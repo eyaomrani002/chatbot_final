@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISET Assistant - Liste des Utilisateurs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-indigo-900 flex items-center justify-center min-h-screen">
+    <div class="bg-white/10 p-8 rounded-lg shadow-lg w-full max-w-4xl">
+        <h1 class="text-2xl font-semibold text-white text-center mb-6">Liste des Utilisateurs</h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="mb-4 p-3 rounded-lg text-sm {{ 'bg-green-500' if category == 'success' else 'bg-red-500' }} text-white">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% if users %}
+            <table class="w-full text-white">
+                <thead>
+                    <tr class="border-b border-gray-600">
+                        <th class="p-3 text-left">ID</th>
+                        <th class="p-3 text-left">Nom d'utilisateur</th>
+                        <th class="p-3 text-left">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                        <tr class="border-b border-gray-700">
+                            <td class="p-3">{{ user['id'] }}</td>
+                            <td class="p-3">{{ user['username'] }}</td>
+                            <td class="p-3">{{ user['email'] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p class="text-gray-400 text-center">Aucun utilisateur trouvé.</p>
+        {% endif %}
+        <a href="{{ url_for('api.home') }}" class="mt-6 inline-block bg-indigo-600 text-white p-3 rounded-lg hover:bg-indigo-700">
+            <i class="fas fa-arrow-left mr-2"></i>Retour au Chat
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+[
+  {
+    "question": "Quand commence le semestre ?",
+    "answer": "Le semestre commence le 1er septembre. Vérifiez le calendrier universitaire.",
+    "link": "http://iset.example.com/calendrier",
+    "category": "Horaires",
+    "response_id": "c23a3bbb-92f4-4822-9513-75ad7534d278",
+    "rating": "Non évalué"
+  },
+  {
+    "session_id": "default",
+    "question": "Quand a lieu le cours de Réseaux ?",
+    "answer": "Le cours de Réseaux est le mercredi de 14h à 16h. Vérifiez le portail.",
+    "link": "http://iset.example.com/horaires",
+    "category": "Horaires",
+    "response_id": "884d36ee-9f7b-493d-aca1-3de02c64cfd1",
+    "rating": "Non évalué"
+  }
+]

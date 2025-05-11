@@ -1,0 +1,13 @@
+Question,Response,Link,Category,Rating,Processed_Question
+What are the schedules for computer science courses?,The schedules are available on the student portal. Check the Schedules section.,http://iset.example.com/horaires,Horaires,0,what schedul comput scienc cours
+When does the semester start?,The semester starts on September 1st. Check the university calendar.,http://iset.example.com/calendrier,Horaires,0,when semest start
+What time is the Algorithms course?,The Algorithms course is scheduled on Monday from 8 AM to 10 AM. Check the portal.,http://iset.example.com/horaires,Horaires,0,what time algorithm cours
+Are there classes on Saturday?,Some practical classes are held on Saturday. Check your timetable.,http://iset.example.com/horaires,Horaires,0,are class saturday
+What is the schedule for the Python course on Monday?,The Python course is from 10 AM to 12 PM in room A-101. Check the portal.,http://iset.example.com/horaires,Horaires,0,what schedul python cours monday
+Where can I find the Civil Engineering timetable?,"The timetable is on the student portal, Civil Engineering section.",http://iset.example.com/horaires,Horaires,0,where find civil engin timet
+When is the Networks course?,The Networks course is on Wednesday from 2 PM to 4 PM. Check the portal.,http://iset.example.com/horaires,Horaires,0,when network cours
+Are classes online or in-person?,"Most classes are in-person, some are online. Check the portal.",http://iset.example.com/horaires,Horaires,0,are class onlin inperson
+Who teaches the Python Programming course?,The course is taught by Prof. Dupont. Check the program.,http://iset.example.com/programmes,Professeurs,0,who teach python program cours
+How can I contact a professor?,Professor contact details are on the faculty portal.,http://iset.example.com/enseignants,Professeurs,0,how contact professor
+Who is the head of the Civil Engineering department?,Prof. Martin is the head. Contact him via the portal.,http://iset.example.com/departements,Professeurs,0,who head civil engin depart
+What are the office hours of professors?,Office hours are listed on the faculty portal.,http://iset.example.com/enseignants,Professeurs,0,what offic hour professor
