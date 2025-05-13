@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Evaluation Results</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 30px;
+            max-width: 1200px;
+        }
+        h1, h2, h3 {
+            color: #343a40;
+        }
+        .model-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .table {
+            font-size: 0.9rem;
+        }
+        .table th, .table td {
+            vertical-align: middle;
+        }
+        .badge {
+            font-size: 0.9rem;
+        }
+        .chart-container {
+            position: relative;
+            margin-bottom: 20px;
+            max-width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Model Evaluation Results for {{ language | upper }}</h1>
+
+        {% if results %}
+            <!-- Mean Accuracy Comparison Chart -->
+            <div class="model-section">
+                <h2>Model Accuracy Comparison</h2>
+                <div class="chart-container">
+                    <canvas id="accuracyChart"></canvas>
+                </div>
+            </div>
+
+            {% for model, metrics in results.items() %}
+                <div class="model-section">
+                    <h2>{{ model | capitalize }} Model</h2>
+                    <p>
+                        <span class="badge bg-primary">Mean Accuracy: {{ "%.2f" | format(metrics.mean_accuracy * 100) }}%</span>
+                        <span class="badge bg-secondary">Folds: {{ metrics.folds }}</span>
+                    </p>
+
+                    <!-- Classification Metrics Chart -->
+                    <h3>Classification Metrics</h3>
+                    <div class="chart-container">
+                        <canvas id="metricsChart-{{ model }}"></canvas>
+                    </div>
+
+                    <!-- Classification Report Table -->
+                    <h3>Classification Report</h3>
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Category</th>
+                                <th>Precision</th>
+                                <th>Recall</th>
+                                <th>F1-Score</th>
+                                <th>Support</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for category, stats in metrics.classification_report.items() %}
+                                {% if category not in ['accuracy', 'macro avg', 'weighted avg'] %}
+                                    <tr>
+                                        <td>{{ category }}</td>
+                                        <td>{{ "%.2f" | format(stats.precision * 100) }}%</td>
+                                        <td>{{ "%.2f" | format(stats.recall * 100) }}%</td>
+                                        <td>{{ "%.2f" | format(stats['f1-score'] * 100) }}%</td>
+                                        <td>{{ stats.support }}</td>
+                                    </tr>
+                                {% endif %}
+                            {% endfor %}
+                            <!-- Macro Average -->
+                            <tr class="table-info">
+                                <td><strong>Macro Avg</strong></td>
+                                <td>{{ "%.2f" | format(metrics.classification_report['macro avg'].precision * 100) }}%</td>
+                                <td>{{ "%.2f" | format(metrics.classification_report['macro avg'].recall * 100) }}%</td>
+                                <td>{{ "%.2f" | format(metrics.classification_report['macro avg']['f1-score'] * 100) }}%</td>
+                                <td>{{ metrics.classification_report['macro avg'].support }}</td>
+                            </tr>
+                            <!-- Weighted Average -->
+                            <tr class="table-info">
+                                <td><strong>Weighted Avg</strong></td>
+                                <td>{{ "%.2f" | format(metrics.classification_report['weighted avg'].precision * 100) }}%</td>
+                                <td>{{ "%.2f" | format(metrics.classification_report['weighted avg'].recall * 100) }}%</td>
+                                <td>{{ "%.2f" | format(metrics.classification_report['weighted avg']['f1-score'] * 100) }}%</td>
+                                <td>{{ metrics.classification_report['weighted avg'].support }}</td>
+                            </tr>
+                            <!-- Overall Accuracy -->
+                            <tr class="table-success">
+                                <td><strong>Accuracy</strong></td>
+                                <td colspan="3">{{ "%.2f" | format(metrics.classification_report.accuracy * 100) }}%</td>
+                                <td>{{ metrics.classification_report['weighted avg'].support }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="alert alert-warning" role="alert">
+                No evaluation results available. Please try again or check the server logs for errors.
+            </div>
+        {% endif %}
+
+        <a href="/home" class="btn btn-primary mt-3">Back to Chat</a>
+    </div>
+
+    <!-- JavaScript for Charts -->
+    <script>
+        // Colors for charts
+        const colors = {
+            precision: 'rgba(54, 162, 235, 0.6)', // Blue
+            recall: 'rgba(255, 99, 132, 0.6)',    // Red
+            f1Score: 'rgba(75, 192, 192, 0.6)',  // Teal
+            accuracy: 'rgba(153, 102, 255, 0.6)' // Purple
+        };
+
+        // Mean Accuracy Chart
+        {% if results %}
+            const accuracyCtx = document.getElementById('accuracyChart').getContext('2d');
+            const accuracyChart = new Chart(accuracyCtx, {
+                type: 'bar',
+                data: {
+                    labels: [{% for model in results.keys() %}'{{ model | capitalize }}'{% if not loop.last %},{% endif %}{% endfor %}],
+                    datasets: [{
+                        label: 'Mean Accuracy (%)',
+                        data: [{% for model, metrics in results.items() %}{{ metrics.mean_accuracy * 100 }}{% if not loop.last %},{% endif %}{% endfor %}],
+                        backgroundColor: colors.accuracy,
+                        borderColor: colors.accuracy.replace('0.6', '1'),
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            title: {
+                                display: true,
+                                text: 'Accuracy (%)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Model'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: true
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: ${context.parsed.y.toFixed(2)}%`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Per-Model Metrics Charts
+            {% for model, metrics in results.items() %}
+                const metricsCtx{{ model }} = document.getElementById('metricsChart-{{ model }}').getContext('2d');
+                const metricsChart{{ model }} = new Chart(metricsCtx{{ model }}, {
+                    type: 'bar',
+                    data: {
+                        labels: [
+                            {% for category, stats in metrics.classification_report.items() %}
+                                {% if category not in ['accuracy'] %}
+                                    '{{ category }}'{% if not loop.last %},{% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        ],
+                        datasets: [
+                            {
+                                label: 'Precision (%)',
+                                data: [
+                                    {% for category, stats in metrics.classification_report.items() %}
+                                        {% if category not in ['accuracy'] %}
+                                            {{ stats.precision * 100 if stats.precision is defined else 0 }}{% if not loop.last %},{% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+                                ],
+                                backgroundColor: colors.precision,
+                                borderColor: colors.precision.replace('0.6', '1'),
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Recall (%)',
+                                data: [
+                                    {% for category, stats in metrics.classification_report.items() %}
+                                        {% if category not in ['accuracy'] %}
+                                            {{ stats.recall * 100 if stats.recall is defined else 0 }}{% if not loop.last %},{% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+                                ],
+                                backgroundColor: colors.recall,
+                                borderColor: colors.recall.replace('0.6', '1'),
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'F1-Score (%)',
+                                data: [
+                                    {% for category, stats in metrics.classification_report.items() %}
+                                        {% if category not in ['accuracy'] %}
+                                            {{ stats['f1-score'] * 100 if stats['f1-score'] is defined else 0 }}{% if not loop.last %},{% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+                                ],
+                                backgroundColor: colors.f1Score,
+                                borderColor: colors.f1Score.replace('0.6', '1'),
+                                borderWidth: 1
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                title: {
+                                    display: true,
+                                    text: 'Percentage (%)'
+                                }
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Category'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'top'
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return `${context.dataset.label}: ${context.parsed.y.toFixed(2)}%`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            {% endfor %}
+        {% endif %}
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

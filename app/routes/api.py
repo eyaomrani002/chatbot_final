@@ -8,9 +8,10 @@ from app.utils.pdf_generator import export_conversations
 from app.utils.image_processing import extract_text
 from flask_login import login_required, current_user
 from app.utils.history import get_conversations
-
+from app.utils.evaluate_model import cross_validate_model
 logger = initialize_logging()
 api = Blueprint('api', __name__)
+supported_langs = ['fr', 'en', 'ar']
 
 try:
     initialize_data()
@@ -158,3 +159,37 @@ def export_conversations_route():
         return jsonify({'error': 'An internal error occurred.'}), 500
     
     
+@api.route('/evaluate_models', methods=['GET'])
+def evaluate_models():
+    """Run cross-validation for all models and display results."""
+    try:
+        lang = request.args.get('lang', 'fr')
+        if lang not in supported_langs:
+            logger.error(f"Langue non supportée: {lang}")
+            return jsonify({'error': f"Langue non supportée. Choisissez parmi {supported_langs}"}), 400
+
+        # Call cross_validate_model with use_sbert=False to avoid SBERT error
+        results = cross_validate_model(lang=lang, k_folds=5, use_sbert=False)
+
+        formatted_results = {}
+        for model, metrics in results.items():
+            formatted_results[model] = {
+                'mean_accuracy': metrics['mean_accuracy'],
+                'classification_report': metrics['mean_classification_report'],
+                'folds': metrics['folds']
+            }
+
+        if request.args.get('format') == 'html':
+            return render_template('evaluate_models.html', language=lang, results=formatted_results)
+        else:
+            return jsonify({
+                'language': lang,
+                'results': formatted_results
+            }), 200
+
+    except Exception as e:
+        logger.error(f"Erreur lors de l'évaluation des modèles: {e}", exc_info=True)
+        if request.args.get('format') == 'html':
+            return render_template('error.html', error_message=f"Erreur lors de l'évaluation des modèles: {str(e)}"), 500
+        else:
+            return jsonify({'error': f"Une erreur interne est survenue: {str(e)}"}), 500

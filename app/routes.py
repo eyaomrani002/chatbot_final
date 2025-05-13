@@ -12,6 +12,8 @@ from .utils.web_search import get_web_response
 from .utils.history import save_conversation, get_conversations
 from .utils.rating import migrate_ratings
 from .utils.voice import generate_audio
+from .utils.evaluate_model import cross_validate_model
+
 
 logger = initialize_logging()
 bp = Blueprint('main', __name__)
@@ -246,3 +248,43 @@ def export_conversations_route():
         buffer, mimetype, filename = result
         return send_file(buffer, mimetype=mimetype, download_name=filename)
     return jsonify(result), result.get('status', 500)
+
+@bp.route('/evaluate_models', methods=['GET'])
+def evaluate_models():
+    """Run cross-validation for all models and display results."""
+    try:
+        # Exécuter la validation croisée pour le français (ou une autre langue si nécessaire)
+        lang = request.args.get('lang', 'fr')  # Permettre de choisir la langue via un paramètre GET
+        if lang not in supported_langs:
+            logger.error(f"Langue non supportée: {lang}")
+            return jsonify({'error': f"Langue non supportée. Choisissez parmi {supported_langs}"}), 400
+
+        # Appeler la fonction cross_validate_model
+        results = cross_validate_model(lang=lang, k_folds=5)
+
+        # Formater les résultats pour l'affichage
+        formatted_results = {}
+        for model, metrics in results.items():
+            formatted_results[model] = {
+                'mean_accuracy': metrics['mean_accuracy'],
+                'classification_report': metrics['mean_classification_report'],
+                'folds': metrics['folds']
+            }
+
+        # Vérifier si le client demande un rendu HTML ou JSON
+        if request.args.get('format') == 'html':
+            return render_template('evaluate_models.html', language=lang, results=formatted_results)
+        else:
+            # Retourner les résultats sous forme de JSON par défaut
+            return jsonify({
+                'language': lang,
+                'results': formatted_results
+            }), 200
+
+    except Exception as e:
+        logger.error(f"Erreur lors de l'évaluation des modèles: {e}", exc_info=True)
+        # Retourner une erreur JSON ou une page d'erreur HTML
+        if request.args.get('format') == 'html':
+            return render_template('error.html', error_message=f"Erreur lors de l'évaluation des modèles: {str(e)}"), 500
+        else:
+            return jsonify({'error': f"Une erreur interne est survenue: {str(e)}"}), 500

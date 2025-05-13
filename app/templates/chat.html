@@ -408,55 +408,62 @@
 <body class="bg-gradient-to-b from-gray-900 to-indigo-900 flex flex-col min-h-screen">
     <div class="flex flex-col w-full h-screen">
         <!-- En-tête -->
-        <div class="glass-effect p-4 flex items-center justify-between" role="banner">
-            <div class="flex items-center space-x-3">
-                <div class="bg-white/10 p-2 rounded-lg" aria-hidden="true">
-                    <i class="fas fa-robot text-lg text-white"></i>
-                </div>
-                <h1 id="title" class="text-lg font-semibold text-white">ISET Assistant</h1>
-            </div>
-            <div class="flex items-center space-x-3" aria-label="Main navigation">
-                <div id="theme_buttons" class="flex space-x-2">
-                    <button id="theme_light"
-                        class="theme-btn bg-white/10 hover:bg-white/20 p-2 rounded-lg text-white animated-button"
-                        data-theme="light" title="Clair" aria-label="Switch to light theme">
-                        <i class="fas fa-sun"></i>
-                    </button>
-                    <button id="theme_dark"
-                        class="theme-btn bg-white/10 hover:bg-white/20 p-2 rounded-lg text-white animated-button"
-                        data-theme="dark" title="Sombre" aria-label="Switch to dark theme">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                    <button id="theme_amber"
-                        class="theme-btn bg-white/10 hover:bg-white/20 p-2 rounded-lg text-white animated-button"
-                        data-theme="amber" title="Ambre" aria-label="Switch to amber theme">
-                        <i class="fas fa-fire"></i>
-                    </button>
-                </div>
-                <button id="historyButton"
-                    class="bg-white/10 hover:bg-white/20 p-2 rounded-lg text-white animated-button"
-                    aria-label="View conversation history">
-                    <i class="fas fa-history"></i>
-                </button>
-           <span class="bg-blue-500 p-2 rounded-lg text-white text-sm font-semibold" aria-label="Current user">
-                    <i class="fas fa-user mr-1"></i>{{ current_user.username }}
-                </span>
-                <a href="{{ url_for('auth.logout') }}"
-                    class="bg-red-500 hover:bg-red-600 p-2 rounded-lg text-white animated-button" aria-label="Log out">
-                    <i class="fas fa-sign-out-alt"></i>
-                </a>
-                <div class="relative">
-                    <select id="ui_lang"
-                        class="bg-white/10 border-0 text-white rounded-lg px-3 py-1.5 text-sm appearance-none focus:ring-0">
-                        <option value="fr" class="bg-gray-800">FR</option>
-                        <option value="en" class="bg-gray-800">EN</option>
-                        <option value="ar" class="bg-gray-800">AR</option>
-                    </select>
-                    <i
-                        class="fas fa-chevron-down text-white/80 absolute right-2 top-2.5 text-xs pointer-events-none"></i>
-                </div>
-            </div>
+<div class="glass-effect p-4 flex items-center justify-between" role="banner">
+    <div class="flex items-center space-x-3">
+        <div class="bg-white/10 p-2 rounded-lg" aria-hidden="true">
+            <i class="fas fa-robot text-lg text-white"></i>
         </div>
+        <h1 id="title" class="text-lg font-semibold text-white">ISET Assistant</h1>
+    </div>
+    <div class="flex items-center space-x-3" aria-label="Main navigation">
+        <div id="theme_buttons" class="flex space-x-2">
+            <button id="theme_light"
+                class="theme-btn bg-white/10 hover:bg-white/20 p-2 rounded-lg text-white animated-button"
+                data-theme="light" title="Clair" aria-label="Switch to light theme">
+                <i class="fas fa-sun"></i>
+            </button>
+            <button id="theme_dark"
+                class="theme-btn bg-white/10 hover:bg-white/20 p-2 rounded-lg text-white animated-button"
+                data-theme="dark" title="Sombre" aria-label="Switch to dark theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="theme_amber"
+                class="theme-btn bg-white/10 hover:bg-white/20 p-2 rounded-lg text-white animated-button"
+                data-theme="amber" title="Ambre" aria-label="Switch to amber theme">
+                <i class="fas fa-fire"></i>
+            </button>
+        </div>
+        <button id="historyButton"
+            class="bg-white/10 hover:bg-white/20 p-2 rounded-lg text-white animated-button"
+            aria-label="View conversation history">
+            <i class="fas fa-history"></i>
+        </button>
+        <!-- Evaluation Button -->
+        <a id="evaluationButton"
+            href="{{ url_for('api.evaluate_models', lang='fr', format='html') }}"
+            class="bg-white/10 hover:bg-white/20 p-2 rounded-lg text-white animated-button"
+            aria-label="View model evaluation results" title="Model Evaluation">
+            <i class="fas fa-chart-bar"></i>
+        </a>
+        <span class="bg-blue-500 p-2 rounded-lg text-white text-sm font-semibold" aria-label="Current user">
+            <i class="fas fa-user mr-1"></i>{{ current_user.username }}
+        </span>
+        <a href="{{ url_for('auth.logout') }}"
+            class="bg-red-500 hover:bg-red-600 p-2 rounded-lg text-white animated-button" aria-label="Log out">
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+        <div class="relative">
+            <select id="ui_lang"
+                class="bg-white/10 border-0 text-white rounded-lg px-3 py-1.5 text-sm appearance-none focus:ring-0">
+                <option value="fr" class="bg-gray-800">FR</option>
+                <option value="en" class="bg-gray-800">EN</option>
+                <option value="ar" class="bg-gray-800">AR</option>
+            </select>
+            <i
+                class="fas fa-chevron-down text-white/80 absolute right-2 top-2.5 text-xs pointer-events-none"></i>
+        </div>
+    </div>
+</div>
 
         <!-- Zone de conversation -->
         <div class="flex-1 flex flex-col overflow-hidden">
@@ -473,7 +480,7 @@
                 <div class="history-content"></div>
             </div>
             <div id="chatbox" class="flex-1 overflow-y-auto p-4 bg-gray-800 chat-container">
-                <div class="chat-bubble-bot">Chargement des données initiales...</div>
+                <div class="chat-bubble-bot">Salut  Bienvenue Chez ISET Chatbot ! Je suis là pour vous aider, n’hésitez pas à poser vos questions</div>
             </div>
 
             <!-- Formulaire d'interaction -->
@@ -576,18 +583,17 @@
                                     class="fas fa-chevron-down text-white/80 absolute right-2 top-2.5 text-xs pointer-events-none"></i>
                             </div>
                             <select id="output_lang" name="output_lang"
-                                class="bg-gray-900 rounded-lg px-3 py-1.5 border border-gray-600 focus:border-indigo-500 text-white text-sm"
+                                    class="bg-white/10 border-0 text-white rounded-lg px-3 py-1.5 text-sm appearance-none focus:ring-0"
                                 aria-label="Langue de sortie">
-                                <option value="fr">Français</option>
-                                <option value="en">English</option>
-                                <option value="ar">العربية</option>
+                                <option value="fr"></option>
+                                <option value="en"></option>
+                                <option value="ar"></option>
                             </select>
 
                             <label class="flex items-center space-x-1">
-                                <input type="checkbox" id="use_voice"
+                                <input type="" id="use_voice"
                                     class="form-checkbox h-4 w-4 text-indigo-600 rounded border-gray-600 bg-gray-800"
                                     aria-label="Activer la voix">
-                                <span id="voiceLabel" class="text-gray-400 text-sm">Voix</span>
                             </label>
                         </div>
 
@@ -1693,6 +1699,13 @@
                 // Existing error handling
             }
         });
+
+
+            document.getElementById('ui_lang').addEventListener('change', function() {
+        const lang = this.value;
+        const evalButton = document.getElementById('evaluationButton');
+        evalButton.href = "{{ url_for('api.evaluate_models', lang='__LANG__', format='html') }}".replace('__LANG__', lang);
+    });
     </script>
 </body>
 
